@@ -1,0 +1,620 @@
+fileFormatVersion: 2
+guid: 9f56d3716dde65e4ca3834b1da2be7d7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: 1_3_ColorLoto_0
+  - first:
+      213: 21300002
+    second: 1_3_ColorLoto_1
+  - first:
+      213: 21300004
+    second: 1_3_ColorLoto_2
+  - first:
+      213: 21300006
+    second: 1_3_ColorLoto_3
+  - first:
+      213: 21300008
+    second: 1_3_ColorLoto_4
+  - first:
+      213: 21300010
+    second: 1_3_ColorLoto_5
+  - first:
+      213: 21300012
+    second: 1_3_ColorLoto_6
+  - first:
+      213: 21300014
+    second: 1_3_ColorLoto_7
+  - first:
+      213: 21300016
+    second: 1_3_ColorLoto_8
+  - first:
+      213: 21300018
+    second: 1_3_ColorLoto_9
+  - first:
+      213: 21300020
+    second: 1_3_ColorLoto_10
+  - first:
+      213: 21300022
+    second: 1_3_ColorLoto_11
+  - first:
+      213: 21300024
+    second: 1_3_ColorLoto_12
+  - first:
+      213: 21300026
+    second: 1_3_ColorLoto_13
+  - first:
+      213: 21300028
+    second: 1_3_ColorLoto_14
+  - first:
+      213: 21300030
+    second: 1_3_ColorLoto_15
+  - first:
+      213: 21300032
+    second: 1_3_ColorLoto_16
+  - first:
+      213: 21300034
+    second: 1_3_ColorLoto_17
+  - first:
+      213: 21300036
+    second: 1_3_ColorLoto_18
+  - first:
+      213: 21300038
+    second: 1_3_ColorLoto_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 100
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 1_3_ColorLoto_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 831
+        width: 94
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b82ec495e2fe941ba0af6bfd9b77f5
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1_3_ColorLoto_1
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 832
+        width: 140
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c893d353dc99b6345bcb88935d42166e
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1_3_ColorLoto_2
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 831
+        width: 129
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e249d60a5cbdc54095a6f40bb2dd526
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1_3_ColorLoto_3
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 831
+        width: 143
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e68ef05f0b20b6c4c8aff717acc22ba6
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1_3_ColorLoto_4
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 829
+        width: 245
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af6fa8ca6b8e5942aa919fc9cfea254
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1_3_ColorLoto_5
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 828
+        width: 133
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c68e14cf288d8b8429ad0890047d96d6
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1_3_ColorLoto_6
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 630
+        width: 130
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ed603a4219ca149a7eef564b1ff68b
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1_3_ColorLoto_7
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 614
+        width: 141
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1e509aad29515438c2226338c16fe0
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1_3_ColorLoto_8
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 612
+        width: 134
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d616fc6cad41254fbf29ae391a5a1e7
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1_3_ColorLoto_9
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 610
+        width: 129
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0132c3c599b294b81b0cd4e64a2ce1
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1_3_ColorLoto_10
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 567
+        width: 191
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f49646dd295f78409c337190b8fda86
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1_3_ColorLoto_11
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 567
+        width: 157
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca0f4dccac39a434989f38282b7e916a
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1_3_ColorLoto_12
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 351
+        width: 199
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf8d2583a49ec042bbc0981adee34b1
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1_3_ColorLoto_13
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 347
+        width: 199
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd0fb72907157c4bb8106cbc8b8df6a
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1_3_ColorLoto_14
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 299
+        width: 307
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac1fe96fe5117a6468d3bbae273563bf
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1_3_ColorLoto_15
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 299
+        width: 203
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6de893029fdbe4cac82d406e58a471
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1_3_ColorLoto_16
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 79
+        width: 191
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ccad4e3d08134d4190ed93b3e5ee0d8
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1_3_ColorLoto_17
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 63
+        width: 203
+        height: 271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdeb12397b407e44fafbc1bdc90d3ee8
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1_3_ColorLoto_18
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 15
+        width: 195
+        height: 271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4deae96aa1868a439805efaaf75a41c
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1_3_ColorLoto_19
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 11
+        width: 191
+        height: 275
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6463bbb971f7dd4988c4065cf2992ff
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1_3_ColorLoto_20
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 48
+        width: 157
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c522ca6ef423d2f40800000000000000
+      internalID: 5705271621702132316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 2d4ca6bd4efc2a34f9fbc3a6be3fcd38
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      1_3_ColorLoto_7: 21300014
+      1_3_ColorLoto_18: 21300036
+      1_3_ColorLoto_12: 21300024
+      1_3_ColorLoto_20: 5705271621702132316
+      1_3_ColorLoto_15: 21300030
+      1_3_ColorLoto_9: 21300018
+      1_3_ColorLoto_16: 21300032
+      1_3_ColorLoto_0: 21300000
+      1_3_ColorLoto_19: 21300038
+      1_3_ColorLoto_1: 21300002
+      1_3_ColorLoto_3: 21300006
+      1_3_ColorLoto_6: 21300012
+      1_3_ColorLoto_8: 21300016
+      1_3_ColorLoto_13: 21300026
+      1_3_ColorLoto_14: 21300028
+      1_3_ColorLoto_17: 21300034
+      1_3_ColorLoto_10: 21300020
+      1_3_ColorLoto_11: 21300022
+      1_3_ColorLoto_4: 21300008
+      1_3_ColorLoto_2: 21300004
+      1_3_ColorLoto_5: 21300010
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

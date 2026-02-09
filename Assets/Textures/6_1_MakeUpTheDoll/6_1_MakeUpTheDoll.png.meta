@@ -1,0 +1,473 @@
+fileFormatVersion: 2
+guid: 16e15b9a6d5c81447b916796cb6b2329
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: 6_1_MakeUpTheDoll_0
+  - first:
+      213: 21300002
+    second: 6_1_MakeUpTheDoll_1
+  - first:
+      213: 21300004
+    second: 6_1_MakeUpTheDoll_2
+  - first:
+      213: 21300006
+    second: 6_1_MakeUpTheDoll_3
+  - first:
+      213: 21300008
+    second: 6_1_MakeUpTheDoll_4
+  - first:
+      213: 21300010
+    second: 6_1_MakeUpTheDoll_5
+  - first:
+      213: 21300012
+    second: 6_1_MakeUpTheDoll_7
+  - first:
+      213: 21300014
+    second: 6_1_MakeUpTheDoll_8
+  - first:
+      213: 21300016
+    second: 6_1_MakeUpTheDoll_9
+  - first:
+      213: 21300018
+    second: 6_1_MakeUpTheDoll_10
+  - first:
+      213: 21300020
+    second: 6_1_MakeUpTheDoll_11
+  - first:
+      213: 21300022
+    second: 6_1_MakeUpTheDoll_12
+  - first:
+      213: 21300024
+    second: 6_1_MakeUpTheDoll_14
+  - first:
+      213: 21300026
+    second: 6_1_MakeUpTheDoll_15
+  - first:
+      213: 21300028
+    second: 6_1_MakeUpTheDoll_16
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 100
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 6_1_MakeUpTheDoll_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3391
+        width: 2054
+        height: 704
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15728666021ae754c9c9c097621cdb99
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6_1_MakeUpTheDoll_1
+      rect:
+        serializedVersion: 2
+        x: 2059
+        y: 2229
+        width: 1232
+        height: 1866
+      alignment: 9
+      pivot: {x: 0.5008198, y: 0.6275628}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a174d46c80bdcc44e898447b0cee52f7
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6_1_MakeUpTheDoll_2
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 3596
+        width: 618
+        height: 496
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95b19ef0422c4fe4381756c0dfef245a
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6_1_MakeUpTheDoll_3
+      rect:
+        serializedVersion: 2
+        x: 3925
+        y: 4041
+        width: 148
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e03e7612ba0d62a4ab0e9a9739c6984d
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6_1_MakeUpTheDoll_4
+      rect:
+        serializedVersion: 2
+        x: 3925
+        y: 3863
+        width: 118
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48789f3c9a9e8914f80cba3113dec91e
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6_1_MakeUpTheDoll_5
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 3414
+        width: 558
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1fa492f069bd8642b5ad22590c067a0
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6_1_MakeUpTheDoll_7
+      rect:
+        serializedVersion: 2
+        x: 3925
+        y: 3561
+        width: 102
+        height: 298
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c46467e20bc094a4f8ac262d52bc195c
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6_1_MakeUpTheDoll_8
+      rect:
+        serializedVersion: 2
+        x: 3297
+        y: 2875
+        width: 532
+        height: 534
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de6b583ee621904f84f512527f142f8
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6_1_MakeUpTheDoll_9
+      rect:
+        serializedVersion: 2
+        x: 3865
+        y: 3161
+        width: 178
+        height: 396
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b3d379c8d229f49ab95c2e135535e0
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6_1_MakeUpTheDoll_10
+      rect:
+        serializedVersion: 2
+        x: 3833
+        y: 3015
+        width: 102
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462761b46341d4d4e8acf4801686d9a3
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6_1_MakeUpTheDoll_11
+      rect:
+        serializedVersion: 2
+        x: 3939
+        y: 2951
+        width: 76
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4366da9eaa0a4e945bee51f8c396f0f6
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6_1_MakeUpTheDoll_12
+      rect:
+        serializedVersion: 2
+        x: 3295
+        y: 2707
+        width: 526
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5363cde4b1eaf9448a49a6cf417c34a4
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6_1_MakeUpTheDoll_14
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 363
+        width: 1232
+        height: 1866
+      alignment: 9
+      pivot: {x: 0.5057438, y: 0.62542784}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75e37030d1f4bdd4a8abaedb3555851f
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6_1_MakeUpTheDoll_15
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 363
+        width: 1180
+        height: 1866
+      alignment: 9
+      pivot: {x: 0.49964032, y: 0.6329397}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4454de9778f0efa4a8deee617ef7d077
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6_1_MakeUpTheDoll_16
+      rect:
+        serializedVersion: 2
+        x: 2420
+        y: 365
+        width: 1187
+        height: 1866
+      alignment: 9
+      pivot: {x: 0.49754584, y: 0.6318402}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68bf32340b50bb346b70a50c854a9b92
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ceb45721bc7a8954faa4040bd70e05e5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      6_1_MakeUpTheDoll_11: 21300020
+      6_1_MakeUpTheDoll_15: 21300026
+      6_1_MakeUpTheDoll_4: 21300008
+      6_1_MakeUpTheDoll_12: 21300022
+      6_1_MakeUpTheDoll_1: 21300002
+      6_1_MakeUpTheDoll_10: 21300018
+      6_1_MakeUpTheDoll_5: 21300010
+      6_1_MakeUpTheDoll_3: 21300006
+      6_1_MakeUpTheDoll_14: 21300024
+      6_1_MakeUpTheDoll_16: 21300028
+      6_1_MakeUpTheDoll_0: 21300000
+      6_1_MakeUpTheDoll_8: 21300014
+      6_1_MakeUpTheDoll_7: 21300012
+      6_1_MakeUpTheDoll_2: 21300004
+      6_1_MakeUpTheDoll_9: 21300016
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
