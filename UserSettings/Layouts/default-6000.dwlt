@@ -1,0 +1,2762 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: 0
+    y: 43
+    width: 1920
+    height: 989
+  m_ShowMode: 4
+  m_Title: Hierarchy
+  m_RootView: {fileID: 4}
+  m_MinSize: {x: 875, y: 300}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_Maximized: 1
+--- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ConsoleWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 669
+    width: 1011
+    height: 264
+  m_MinSize: {x: 101, y: 126}
+  m_MaxSize: {x: 4001, y: 4026}
+  m_ActualView: {fileID: 16}
+  m_Panes:
+  - {fileID: 16}
+  - {fileID: 13}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 8}
+  - {fileID: 2}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1011
+    height: 933
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 8096, y: 16192}
+  vertical: 1
+  controlID: 17
+  draggingID: 0
+--- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 5}
+  - {fileID: 6}
+  - {fileID: 7}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1920
+    height: 989
+  m_MinSize: {x: 875, y: 300}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_UseTopView: 1
+  m_TopViewHeight: 36
+  m_UseBottomView: 1
+  m_BottomViewHeight: 20
+--- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12011, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1920
+    height: 36
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_LastLoadedLayoutName: 
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 3}
+  - {fileID: 9}
+  - {fileID: 10}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 36
+    width: 1920
+    height: 933
+  m_MinSize: {x: 300, y: 100}
+  m_MaxSize: {x: 24288, y: 16192}
+  vertical: 0
+  controlID: 112
+  draggingID: 0
+--- !u!114 &7
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12042, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 969
+    width: 1920
+    height: 20
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+--- !u!114 &8
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: SceneView
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1011
+    height: 669
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
+  m_ActualView: {fileID: 20}
+  m_Panes:
+  - {fileID: 20}
+  - {fileID: 19}
+  - {fileID: 14}
+  - {fileID: 15}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &9
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 11}
+  - {fileID: 12}
+  m_Position:
+    serializedVersion: 2
+    x: 1011
+    y: 0
+    width: 391
+    height: 933
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 8096, y: 16192}
+  vertical: 1
+  controlID: 61
+  draggingID: 0
+--- !u!114 &10
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 1402
+    y: 0
+    width: 518
+    height: 933
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
+  m_ActualView: {fileID: 17}
+  m_Panes:
+  - {fileID: 17}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &11
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 391
+    height: 410
+  m_MinSize: {x: 202, y: 226}
+  m_MaxSize: {x: 4002, y: 4026}
+  m_ActualView: {fileID: 21}
+  m_Panes:
+  - {fileID: 21}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 410
+    width: 391
+    height: 523
+  m_MinSize: {x: 232, y: 276}
+  m_MaxSize: {x: 10002, y: 10026}
+  m_ActualView: {fileID: 18}
+  m_Panes:
+  - {fileID: 18}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &13
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 50, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: Test framework for running Edit mode and Play mode tests in Unity.
+      Part of the com.unity.test-framework package.
+    m_TextWithWhitespace: "Test Runner\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: -1920
+    y: 487
+    width: 1010
+    height: 499
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_ContainerData: []
+    m_OverlaysVisible: 1
+  m_Spl:
+    ID: 4408
+    splitterInitialOffset: 0
+    currentActiveSplitter: -1
+    realSizes:
+    - 322
+    - 107
+    relativeSizes:
+    - 0.75
+    - 0.25
+    minSizes:
+    - 32
+    - 32
+    maxSizes:
+    - 0
+    - 0
+    lastTotalSize: 429
+    splitSize: 6
+    xOffset: 0
+    m_Version: 1
+    oldRealSizes: 
+    oldMinSizes: 
+    oldMaxSizes: 
+    oldSplitSize: 0
+  m_TestTypeToolbarIndex: 0
+  m_TestListGUIs:
+  - m_Window: {fileID: 13}
+    runProgress:
+      RunGuid: e123d2fa-63fd-4443-b826-224d6a3ca070
+      ExecutionSettings:
+        m_TargetPlatform: 0
+        m_HasTargetPlatform: 0
+        filter:
+          testMode: 0
+          testNames: []
+          groupNames: []
+          categoryNames: []
+          assemblyNames: []
+        filters:
+        - testMode: 2
+          testNames:
+          - Tests.PlayTests.SceneLoader.SceneLoaderTest.WhenSceneLoadThenSceneLoaded
+          - Tests.PlayTests.SceneLoader.SceneLoaderTest.WhenSceneLoadThenSceneLoaded("Initialize")
+          - Tests.PlayTests.SceneLoader.SceneLoaderTest.WhenSceneLoadThenSceneLoaded("Game")
+          - Tests.PlayTests.Infrastructure.EntryPointsTests.SpawnFigureWhenGameSceneStarted
+          - Tests.PlayTests.Infrastructure.InfrastructureTests.WhenInitializeSceneLoadThenGameSceneLoaded
+          - Tests.PlayTests.Infrastructure.EntryPointsTests.CreatedShapeIsMovingDownwards
+          - Tests.PlayTests.Game.GameLoopTests.ThroughIntravalInSettingsTheFigureShouldMoveDown
+          - Tests.PlayTests.Game.GameLoopTests.WhenRightArrowIsPressedFigureShouldTurnToRight
+          - Tests.PlayTests.Game.GameLoopTests.WhenLeftArrowIsPressedFigureShouldTurnToLeft
+          - Tests.PlayTests.Game.GameLoopTests.RestrictionOfTheMovementOfTheFigureFromBelow
+          - Tests.PlayTests.Game.GameLoopTests.AppearanceOfNewFigureWhenInstallingThePreviousFigure
+          - Tests.PlayTests.Game.GameLoopTests.AddingShapeToMapWhenItReachesBottom
+          - Tests.PlayTests.Game.GameLoopTests.MergingShapesWithSameValuesAfterTheMovementStops
+          - Tests.PlayTests.Spawners.BlockDeletedTests.RemovingTheBlockAppearance
+          - Tests.PlayTests.Game.GameLoopTests.MergingShapesWithTheSameHorizontalValuesAfterTheMovementStops
+          - Tests.PlayTests.Game.GameLoopTests.MovementOfTheFigureToTheEndOfTheMapWhenClickingOnTheDownArrow
+          groupNames: []
+          categoryNames: []
+          assemblyNames:
+          - Test.PlayMode
+        runSynchronously: 0
+        playerHeartbeatTimeout: 600
+        orderedTestNames: []
+        ignoreTests: []
+        featureFlags:
+          fileCleanUpCheck: 0
+          requiresSplashScreen: 0
+          strictDomainReload: 0
+          disableNestedEnumeratorBugfix: 0
+        randomOrderSeed: 0
+      HasFinished: 1
+      Progress: 0.9999999
+      CurrentStepName: Unlock Reload Assemblies
+      CurrentStageName: 
+    m_NewResultList:
+    - id: 1018
+      uniqueId: '[tetris2048][suite]'
+      name: tetris2048
+      fullName: tetris2048
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1069
+      uniqueId: '[Tests.Editor.dll][suite]'
+      name: Tests.Editor.dll
+      fullName: D:/git/tetris-2048/tetris2048/Library/ScriptAssemblies/Tests.Editor.dll
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1079
+      parentUniqueId: '[tetris2048][suite]'
+    - id: 1070
+      uniqueId: 'Tests.Editor.dll/[Tests][suite]'
+      name: Tests
+      fullName: Tests
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1069
+      parentUniqueId: '[Tests.Editor.dll][suite]'
+    - id: 1071
+      uniqueId: 'Tests.Editor.dll/Tests/[EditorTests][suite]'
+      name: EditorTests
+      fullName: Tests.EditorTests
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1070
+      parentUniqueId: 'Tests.Editor.dll/[Tests][suite]'
+    - id: 1073
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/[Tests.Editor][Tests.EditorTests.Factoryes][suite]'
+      name: Factoryes
+      fullName: Tests.EditorTests.Factoryes
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1071
+      parentUniqueId: 'Tests.Editor.dll/Tests/[EditorTests][suite]'
+    - id: 1037
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests][suite]'
+      name: BlockFactoryTests
+      fullName: Tests.EditorTests.Factoryes.BlockFactoryTests
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1073
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/[Tests.Editor][Tests.EditorTests.Factoryes][suite]'
+    - id: 1046
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating][suite]'
+      name: CorrectNumberOfBlocksRelativeToTheSheWhenCreating
+      fullName: Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1037
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests][suite]'
+    - id: 1021
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/CorrectNumberOfBlocksRelativeToTheSheWhenCreating/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating(4,I)]'
+      name: CorrectNumberOfBlocksRelativeToTheSheWhenCreating(4,I)
+      fullName: Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating(4,I)
+      resultStatus: 1
+      duration: 0.0108699
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1028
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating][suite]'
+    - id: 1022
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/CorrectNumberOfBlocksRelativeToTheSheWhenCreating/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating(4,J)]'
+      name: CorrectNumberOfBlocksRelativeToTheSheWhenCreating(4,J)
+      fullName: Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating(4,J)
+      resultStatus: 1
+      duration: 0.0001963
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1028
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating][suite]'
+    - id: 1023
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/CorrectNumberOfBlocksRelativeToTheSheWhenCreating/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating(4,L)]'
+      name: CorrectNumberOfBlocksRelativeToTheSheWhenCreating(4,L)
+      fullName: Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating(4,L)
+      resultStatus: 1
+      duration: 0.0001696
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1028
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating][suite]'
+    - id: 1024
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/CorrectNumberOfBlocksRelativeToTheSheWhenCreating/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating(4,O)]'
+      name: CorrectNumberOfBlocksRelativeToTheSheWhenCreating(4,O)
+      fullName: Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating(4,O)
+      resultStatus: 1
+      duration: 0.0001625
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1028
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating][suite]'
+    - id: 1025
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/CorrectNumberOfBlocksRelativeToTheSheWhenCreating/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating(4,S)]'
+      name: CorrectNumberOfBlocksRelativeToTheSheWhenCreating(4,S)
+      fullName: Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating(4,S)
+      resultStatus: 1
+      duration: 0.0001586
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1028
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating][suite]'
+    - id: 1026
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/CorrectNumberOfBlocksRelativeToTheSheWhenCreating/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating(4,T)]'
+      name: CorrectNumberOfBlocksRelativeToTheSheWhenCreating(4,T)
+      fullName: Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating(4,T)
+      resultStatus: 1
+      duration: 0.0001456
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1028
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating][suite]'
+    - id: 1027
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/CorrectNumberOfBlocksRelativeToTheSheWhenCreating/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating(4,Z)]'
+      name: CorrectNumberOfBlocksRelativeToTheSheWhenCreating(4,Z)
+      fullName: Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating(4,Z)
+      resultStatus: 1
+      duration: 0.0001427
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1028
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectNumberOfBlocksRelativeToTheSheWhenCreating][suite]'
+    - id: 1054
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating][suite]'
+      name: CorrectPositionOfTheBlocksRelativeToShapeWhenCreating
+      fullName: Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1037
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests][suite]'
+    - id: 1029
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/CorrectPositionOfTheBlocksRelativeToShapeWhenCreating/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating(I)]'
+      name: CorrectPositionOfTheBlocksRelativeToShapeWhenCreating(I)
+      fullName: Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating(I)
+      resultStatus: 1
+      duration: 0.0011852
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating][suite]'
+    - id: 1030
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/CorrectPositionOfTheBlocksRelativeToShapeWhenCreating/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating(J)]'
+      name: CorrectPositionOfTheBlocksRelativeToShapeWhenCreating(J)
+      fullName: Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating(J)
+      resultStatus: 1
+      duration: 0.0001508
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating][suite]'
+    - id: 1031
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/CorrectPositionOfTheBlocksRelativeToShapeWhenCreating/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating(L)]'
+      name: CorrectPositionOfTheBlocksRelativeToShapeWhenCreating(L)
+      fullName: Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating(L)
+      resultStatus: 1
+      duration: 0.0001414
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating][suite]'
+    - id: 1032
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/CorrectPositionOfTheBlocksRelativeToShapeWhenCreating/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating(O)]'
+      name: CorrectPositionOfTheBlocksRelativeToShapeWhenCreating(O)
+      fullName: Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating(O)
+      resultStatus: 1
+      duration: 0.0001412
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating][suite]'
+    - id: 1033
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/CorrectPositionOfTheBlocksRelativeToShapeWhenCreating/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating(S)]'
+      name: CorrectPositionOfTheBlocksRelativeToShapeWhenCreating(S)
+      fullName: Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating(S)
+      resultStatus: 1
+      duration: 0.000137
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating][suite]'
+    - id: 1034
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/CorrectPositionOfTheBlocksRelativeToShapeWhenCreating/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating(T)]'
+      name: CorrectPositionOfTheBlocksRelativeToShapeWhenCreating(T)
+      fullName: Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating(T)
+      resultStatus: 1
+      duration: 0.0001399
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating][suite]'
+    - id: 1035
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/CorrectPositionOfTheBlocksRelativeToShapeWhenCreating/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating(Z)]'
+      name: CorrectPositionOfTheBlocksRelativeToShapeWhenCreating(Z)
+      fullName: Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating(Z)
+      resultStatus: 1
+      duration: 0.0001369
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CorrectPositionOfTheBlocksRelativeToShapeWhenCreating][suite]'
+    - id: 1020
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/BlockFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests.CreatingANewBlocksUsingFactory]'
+      name: CreatingANewBlocksUsingFactory
+      fullName: Tests.EditorTests.Factoryes.BlockFactoryTests.CreatingANewBlocksUsingFactory
+      resultStatus: 1
+      duration: 0.0024718
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/[Tests.Editor][Tests.EditorTests.Factoryes.BlockFactoryTests][suite]'
+    - id: 1055
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests][suite]'
+      name: FigureFactoryTests
+      fullName: Tests.EditorTests.Factoryes.FigureFactoryTests
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1073
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/[Tests.Editor][Tests.EditorTests.Factoryes][suite]'
+    - id: 1038
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.CreatingANewFigureUsingFactory]'
+      name: CreatingANewFigureUsingFactory
+      fullName: Tests.EditorTests.Factoryes.FigureFactoryTests.CreatingANewFigureUsingFactory
+      resultStatus: 1
+      duration: 0.0002684
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests][suite]'
+    - id: 1068
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape][suite]'
+      name: PresenceOfBlocksAfterCreatingShape
+      fullName: Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1055
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests][suite]'
+    - id: 1043
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/PresenceOfBlocksAfterCreatingShape/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape(4,I)]'
+      name: PresenceOfBlocksAfterCreatingShape(4,I)
+      fullName: Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape(4,I)
+      resultStatus: 1
+      duration: 0.0003585
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1050
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape][suite]'
+    - id: 1044
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/PresenceOfBlocksAfterCreatingShape/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape(4,J)]'
+      name: PresenceOfBlocksAfterCreatingShape(4,J)
+      fullName: Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape(4,J)
+      resultStatus: 1
+      duration: 0.0001472
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1050
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape][suite]'
+    - id: 1045
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/PresenceOfBlocksAfterCreatingShape/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape(4,L)]'
+      name: PresenceOfBlocksAfterCreatingShape(4,L)
+      fullName: Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape(4,L)
+      resultStatus: 1
+      duration: 0.000122
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1050
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape][suite]'
+    - id: 1046
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/PresenceOfBlocksAfterCreatingShape/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape(4,O)]'
+      name: PresenceOfBlocksAfterCreatingShape(4,O)
+      fullName: Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape(4,O)
+      resultStatus: 1
+      duration: 0.0001198
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1050
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape][suite]'
+    - id: 1047
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/PresenceOfBlocksAfterCreatingShape/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape(4,S)]'
+      name: PresenceOfBlocksAfterCreatingShape(4,S)
+      fullName: Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape(4,S)
+      resultStatus: 1
+      duration: 0.0001207
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1050
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape][suite]'
+    - id: 1048
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/PresenceOfBlocksAfterCreatingShape/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape(4,T)]'
+      name: PresenceOfBlocksAfterCreatingShape(4,T)
+      fullName: Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape(4,T)
+      resultStatus: 1
+      duration: 0.0001496
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1050
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape][suite]'
+    - id: 1049
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/PresenceOfBlocksAfterCreatingShape/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape(4,Z)]'
+      name: PresenceOfBlocksAfterCreatingShape(4,Z)
+      fullName: Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape(4,Z)
+      resultStatus: 1
+      duration: 0.0001498
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1050
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.PresenceOfBlocksAfterCreatingShape][suite]'
+    - id: 1060
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.ShapeIsSetToItsInitialStateAfterCreation][suite]'
+      name: ShapeIsSetToItsInitialStateAfterCreation
+      fullName: Tests.EditorTests.Factoryes.FigureFactoryTests.ShapeIsSetToItsInitialStateAfterCreation
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1055
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests][suite]'
+    - id: 1039
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/ShapeIsSetToItsInitialStateAfterCreation/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.ShapeIsSetToItsInitialStateAfterCreation(0,0)]'
+      name: ShapeIsSetToItsInitialStateAfterCreation(0,0)
+      fullName: Tests.EditorTests.Factoryes.FigureFactoryTests.ShapeIsSetToItsInitialStateAfterCreation(0,0)
+      resultStatus: 1
+      duration: 0.0003679
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.ShapeIsSetToItsInitialStateAfterCreation][suite]'
+    - id: 1040
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/ShapeIsSetToItsInitialStateAfterCreation/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.ShapeIsSetToItsInitialStateAfterCreation(-1,1)]'
+      name: ShapeIsSetToItsInitialStateAfterCreation(-1,1)
+      fullName: Tests.EditorTests.Factoryes.FigureFactoryTests.ShapeIsSetToItsInitialStateAfterCreation(-1,1)
+      resultStatus: 1
+      duration: 0.0001288
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.ShapeIsSetToItsInitialStateAfterCreation][suite]'
+    - id: 1041
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/ShapeIsSetToItsInitialStateAfterCreation/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.ShapeIsSetToItsInitialStateAfterCreation(1,-1)]'
+      name: ShapeIsSetToItsInitialStateAfterCreation(1,-1)
+      fullName: Tests.EditorTests.Factoryes.FigureFactoryTests.ShapeIsSetToItsInitialStateAfterCreation(1,-1)
+      resultStatus: 1
+      duration: 0.0001205
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Factoryes/FigureFactoryTests/[Tests.Editor][Tests.EditorTests.Factoryes.FigureFactoryTests.ShapeIsSetToItsInitialStateAfterCreation][suite]'
+    - id: 1072
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/[Tests.Editor][Tests.EditorTests.Spawners][suite]'
+      name: Spawners
+      fullName: Tests.EditorTests.Spawners
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1071
+      parentUniqueId: 'Tests.Editor.dll/Tests/[EditorTests][suite]'
+    - id: 1019
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/[Tests.Editor][Tests.EditorTests.Spawners.BlockSpawnerTests][suite]'
+      name: BlockSpawnerTests
+      fullName: Tests.EditorTests.Spawners.BlockSpawnerTests
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1072
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/[Tests.Editor][Tests.EditorTests.Spawners][suite]'
+    - id: 1002
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/BlockSpawnerTests/[Tests.Editor][Tests.EditorTests.Spawners.BlockSpawnerTests.CreatingANewBlocksViewUsingSpawner]'
+      name: CreatingANewBlocksViewUsingSpawner
+      fullName: Tests.EditorTests.Spawners.BlockSpawnerTests.CreatingANewBlocksViewUsingSpawner
+      resultStatus: 1
+      duration: 0.0018378
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/[Tests.Editor][Tests.EditorTests.Spawners.BlockSpawnerTests][suite]'
+    - id: 1022
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/BlockSpawnerTests/[Tests.Editor][Tests.EditorTests.Spawners.BlockSpawnerTests.CreatingBlockInCorrectPositions][suite]'
+      name: CreatingBlockInCorrectPositions
+      fullName: Tests.EditorTests.Spawners.BlockSpawnerTests.CreatingBlockInCorrectPositions
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1019
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/[Tests.Editor][Tests.EditorTests.Spawners.BlockSpawnerTests][suite]'
+    - id: 1003
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/BlockSpawnerTests/CreatingBlockInCorrectPositions/[Tests.Editor][Tests.EditorTests.Spawners.BlockSpawnerTests.CreatingBlockInCorrectPositions(10,5)]'
+      name: CreatingBlockInCorrectPositions(10,5)
+      fullName: Tests.EditorTests.Spawners.BlockSpawnerTests.CreatingBlockInCorrectPositions(10,5)
+      resultStatus: 1
+      duration: 0.001651
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/BlockSpawnerTests/[Tests.Editor][Tests.EditorTests.Spawners.BlockSpawnerTests.CreatingBlockInCorrectPositions][suite]'
+    - id: 1023
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests][suite]'
+      name: FigureSpawnersTests
+      fullName: Tests.EditorTests.Spawners.FigureSpawnersTests
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1072
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/[Tests.Editor][Tests.EditorTests.Spawners][suite]'
+    - id: 1036
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/FigureSpawnersTests/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure][suite]'
+      name: CorrectnessOfTheCorrectShapeOfFigure
+      fullName: Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1023
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests][suite]'
+    - id: 1011
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/FigureSpawnersTests/CorrectnessOfTheCorrectShapeOfFigure/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure(I)]'
+      name: CorrectnessOfTheCorrectShapeOfFigure(I)
+      fullName: Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure(I)
+      resultStatus: 1
+      duration: 0.0059312
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/FigureSpawnersTests/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure][suite]'
+    - id: 1012
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/FigureSpawnersTests/CorrectnessOfTheCorrectShapeOfFigure/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure(J)]'
+      name: CorrectnessOfTheCorrectShapeOfFigure(J)
+      fullName: Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure(J)
+      resultStatus: 1
+      duration: 0.0032776
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/FigureSpawnersTests/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure][suite]'
+    - id: 1013
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/FigureSpawnersTests/CorrectnessOfTheCorrectShapeOfFigure/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure(L)]'
+      name: CorrectnessOfTheCorrectShapeOfFigure(L)
+      fullName: Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure(L)
+      resultStatus: 1
+      duration: 0.0037074
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/FigureSpawnersTests/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure][suite]'
+    - id: 1014
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/FigureSpawnersTests/CorrectnessOfTheCorrectShapeOfFigure/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure(O)]'
+      name: CorrectnessOfTheCorrectShapeOfFigure(O)
+      fullName: Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure(O)
+      resultStatus: 1
+      duration: 0.0030969
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/FigureSpawnersTests/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure][suite]'
+    - id: 1015
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/FigureSpawnersTests/CorrectnessOfTheCorrectShapeOfFigure/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure(S)]'
+      name: CorrectnessOfTheCorrectShapeOfFigure(S)
+      fullName: Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure(S)
+      resultStatus: 1
+      duration: 0.0030696
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/FigureSpawnersTests/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure][suite]'
+    - id: 1016
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/FigureSpawnersTests/CorrectnessOfTheCorrectShapeOfFigure/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure(T)]'
+      name: CorrectnessOfTheCorrectShapeOfFigure(T)
+      fullName: Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure(T)
+      resultStatus: 1
+      duration: 0.0030263
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/FigureSpawnersTests/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure][suite]'
+    - id: 1017
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/FigureSpawnersTests/CorrectnessOfTheCorrectShapeOfFigure/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure(Z)]'
+      name: CorrectnessOfTheCorrectShapeOfFigure(Z)
+      fullName: Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure(Z)
+      resultStatus: 1
+      duration: 0.0031637
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/FigureSpawnersTests/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests.CorrectnessOfTheCorrectShapeOfFigure][suite]'
+    - id: 1006
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/FigureSpawnersTests/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests.CreatingANewFigureViewUsingSpawner]'
+      name: CreatingANewFigureViewUsingSpawner
+      fullName: Tests.EditorTests.Spawners.FigureSpawnersTests.CreatingANewFigureViewUsingSpawner
+      resultStatus: 1
+      duration: 0.001269
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1005
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests][suite]'
+    - id: 1010
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/FigureSpawnersTests/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests.CreatingAnExternalShapeFromRegularShapedBlocks]'
+      name: CreatingAnExternalShapeFromRegularShapedBlocks
+      fullName: Tests.EditorTests.Spawners.FigureSpawnersTests.CreatingAnExternalShapeFromRegularShapedBlocks
+      resultStatus: 1
+      duration: 0.0033455
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1005
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests][suite]'
+    - id: 1027
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/FigureSpawnersTests/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests.SettingThePositionOfShapeViewWhenCreating][suite]'
+      name: SettingThePositionOfShapeViewWhenCreating
+      fullName: Tests.EditorTests.Spawners.FigureSpawnersTests.SettingThePositionOfShapeViewWhenCreating
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1023
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests][suite]'
+    - id: 1007
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/FigureSpawnersTests/SettingThePositionOfShapeViewWhenCreating/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests.SettingThePositionOfShapeViewWhenCreating(-1,1)]'
+      name: SettingThePositionOfShapeViewWhenCreating(-1,1)
+      fullName: Tests.EditorTests.Spawners.FigureSpawnersTests.SettingThePositionOfShapeViewWhenCreating(-1,1)
+      resultStatus: 1
+      duration: 0.0016724
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1009
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/FigureSpawnersTests/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests.SettingThePositionOfShapeViewWhenCreating][suite]'
+    - id: 1008
+      uniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/FigureSpawnersTests/SettingThePositionOfShapeViewWhenCreating/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests.SettingThePositionOfShapeViewWhenCreating(1,-1)]'
+      name: SettingThePositionOfShapeViewWhenCreating(1,-1)
+      fullName: Tests.EditorTests.Spawners.FigureSpawnersTests.SettingThePositionOfShapeViewWhenCreating(1,-1)
+      resultStatus: 1
+      duration: 0.0010799
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1009
+      parentUniqueId: 'Tests.Editor.dll/Tests/EditorTests/Spawners/FigureSpawnersTests/[Tests.Editor][Tests.EditorTests.Spawners.FigureSpawnersTests.SettingThePositionOfShapeViewWhenCreating][suite]'
+    m_ResultText: CorrectnessOfTheCorrectShapeOfFigure(I) (0,006s)
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 18}
+      m_SelectedIDs: 60040b9d
+      m_LastClickedID: -1660222368
+      m_ExpandedIDs: ccac0fab820340c0e4324e1926f03e265a6ce0278a323d2afd38ab2c779cd937ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_TrimLeadingAndTrailingWhitespace: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategories: []
+      availableCategories:
+      - Uncategorized
+    m_SelectedOption: 0
+  - m_Window: {fileID: 0}
+    runProgress:
+      RunGuid: e123d2fa-63fd-4443-b826-224d6a3ca070
+      ExecutionSettings:
+        m_TargetPlatform: 0
+        m_HasTargetPlatform: 0
+        filter:
+          testMode: 0
+          testNames: []
+          groupNames: []
+          categoryNames: []
+          assemblyNames: []
+        filters:
+        - testMode: 2
+          testNames:
+          - Tests.PlayTests.SceneLoader.SceneLoaderTest.WhenSceneLoadThenSceneLoaded
+          - Tests.PlayTests.SceneLoader.SceneLoaderTest.WhenSceneLoadThenSceneLoaded("Initialize")
+          - Tests.PlayTests.SceneLoader.SceneLoaderTest.WhenSceneLoadThenSceneLoaded("Game")
+          - Tests.PlayTests.Infrastructure.EntryPointsTests.SpawnFigureWhenGameSceneStarted
+          - Tests.PlayTests.Infrastructure.InfrastructureTests.WhenInitializeSceneLoadThenGameSceneLoaded
+          - Tests.PlayTests.Infrastructure.EntryPointsTests.CreatedShapeIsMovingDownwards
+          - Tests.PlayTests.Game.GameLoopTests.ThroughIntravalInSettingsTheFigureShouldMoveDown
+          - Tests.PlayTests.Game.GameLoopTests.WhenRightArrowIsPressedFigureShouldTurnToRight
+          - Tests.PlayTests.Game.GameLoopTests.WhenLeftArrowIsPressedFigureShouldTurnToLeft
+          - Tests.PlayTests.Game.GameLoopTests.RestrictionOfTheMovementOfTheFigureFromBelow
+          - Tests.PlayTests.Game.GameLoopTests.AppearanceOfNewFigureWhenInstallingThePreviousFigure
+          - Tests.PlayTests.Game.GameLoopTests.AddingShapeToMapWhenItReachesBottom
+          - Tests.PlayTests.Game.GameLoopTests.MergingShapesWithSameValuesAfterTheMovementStops
+          - Tests.PlayTests.Spawners.BlockDeletedTests.RemovingTheBlockAppearance
+          - Tests.PlayTests.Game.GameLoopTests.MergingShapesWithTheSameHorizontalValuesAfterTheMovementStops
+          - Tests.PlayTests.Game.GameLoopTests.MovementOfTheFigureToTheEndOfTheMapWhenClickingOnTheDownArrow
+          groupNames: []
+          categoryNames: []
+          assemblyNames:
+          - Test.PlayMode
+        runSynchronously: 0
+        playerHeartbeatTimeout: 600
+        orderedTestNames: []
+        ignoreTests: []
+        featureFlags:
+          fileCleanUpCheck: 0
+          requiresSplashScreen: 0
+          strictDomainReload: 0
+          disableNestedEnumeratorBugfix: 0
+        randomOrderSeed: 0
+      HasFinished: 1
+      Progress: 0.9999999
+      CurrentStepName: Unlock Reload Assemblies
+      CurrentStageName: 
+    m_NewResultList: []
+    m_ResultText: 
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_TrimLeadingAndTrailingWhitespace: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategories: []
+      availableCategories: []
+    m_SelectedOption: 0
+  - m_Window: {fileID: 0}
+    runProgress:
+      RunGuid: e123d2fa-63fd-4443-b826-224d6a3ca070
+      ExecutionSettings:
+        m_TargetPlatform: 0
+        m_HasTargetPlatform: 0
+        filter:
+          testMode: 0
+          testNames: []
+          groupNames: []
+          categoryNames: []
+          assemblyNames: []
+        filters:
+        - testMode: 2
+          testNames:
+          - Tests.PlayTests.SceneLoader.SceneLoaderTest.WhenSceneLoadThenSceneLoaded
+          - Tests.PlayTests.SceneLoader.SceneLoaderTest.WhenSceneLoadThenSceneLoaded("Initialize")
+          - Tests.PlayTests.SceneLoader.SceneLoaderTest.WhenSceneLoadThenSceneLoaded("Game")
+          - Tests.PlayTests.Infrastructure.EntryPointsTests.SpawnFigureWhenGameSceneStarted
+          - Tests.PlayTests.Infrastructure.InfrastructureTests.WhenInitializeSceneLoadThenGameSceneLoaded
+          - Tests.PlayTests.Infrastructure.EntryPointsTests.CreatedShapeIsMovingDownwards
+          - Tests.PlayTests.Game.GameLoopTests.ThroughIntravalInSettingsTheFigureShouldMoveDown
+          - Tests.PlayTests.Game.GameLoopTests.WhenRightArrowIsPressedFigureShouldTurnToRight
+          - Tests.PlayTests.Game.GameLoopTests.WhenLeftArrowIsPressedFigureShouldTurnToLeft
+          - Tests.PlayTests.Game.GameLoopTests.RestrictionOfTheMovementOfTheFigureFromBelow
+          - Tests.PlayTests.Game.GameLoopTests.AppearanceOfNewFigureWhenInstallingThePreviousFigure
+          - Tests.PlayTests.Game.GameLoopTests.AddingShapeToMapWhenItReachesBottom
+          - Tests.PlayTests.Game.GameLoopTests.MergingShapesWithSameValuesAfterTheMovementStops
+          - Tests.PlayTests.Spawners.BlockDeletedTests.RemovingTheBlockAppearance
+          - Tests.PlayTests.Game.GameLoopTests.MergingShapesWithTheSameHorizontalValuesAfterTheMovementStops
+          - Tests.PlayTests.Game.GameLoopTests.MovementOfTheFigureToTheEndOfTheMapWhenClickingOnTheDownArrow
+          groupNames: []
+          categoryNames: []
+          assemblyNames:
+          - Test.PlayMode
+        runSynchronously: 0
+        playerHeartbeatTimeout: 600
+        orderedTestNames: []
+        ignoreTests: []
+        featureFlags:
+          fileCleanUpCheck: 0
+          requiresSplashScreen: 0
+          strictDomainReload: 0
+          disableNestedEnumeratorBugfix: 0
+        randomOrderSeed: 0
+      HasFinished: 1
+      Progress: 0.9999999
+      CurrentStepName: Unlock Reload Assemblies
+      CurrentStageName: 
+    m_NewResultList: []
+    m_ResultText: 
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_TrimLeadingAndTrailingWhitespace: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategories: []
+      availableCategories: []
+    m_SelectedOption: 0
+--- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12043, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 640, y: 580}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Build Settings
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+    m_TextWithWhitespace: "Build Settings\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 73
+    width: 1011
+    height: 666
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_ContainerData: []
+    m_OverlaysVisible: 1
+  m_TreeViewState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 980f5dac
+    m_LastClickedID: -1403187304
+    m_ExpandedIDs: ffffffff
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 0
+      m_TrimLeadingAndTrailingWhitespace: 0
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13854, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 310, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Project Settings
+    m_Image: {fileID: -5712115415447495865, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+    m_TextWithWhitespace: "Project Settings\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 73
+    width: 1011
+    height: 666
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_ContainerData: []
+    m_OverlaysVisible: 1
+  m_PosLeft: {x: 0, y: 0}
+  m_PosRight: {x: 0, y: 0}
+  m_Scope: 1
+  m_SplitterFlex: 0.38847858
+  m_SearchText: 
+  m_TreeViewState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: eb925b96
+    m_LastClickedID: -1772383509
+    m_ExpandedIDs: a01a5fa600000000e594f01a07f2324dc53aba5a
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 0
+      m_TrimLeadingAndTrailingWhitespace: 0
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+--- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Console
+    m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+    m_TextWithWhitespace: "Console\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 693
+    width: 1010
+    height: 238
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_ContainerData: []
+    m_OverlaysVisible: 1
+--- !u!114 &17
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Inspector
+    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+    m_TextWithWhitespace: "Inspector\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: 1403
+    y: 24
+    width: 517
+    height: 907
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_ContainerData: []
+    m_OverlaysVisible: 1
+  m_ObjectsLockedBeforeSerialization: []
+  m_InstanceIDsLockedBeforeSerialization: 
+  m_PreviewResizer:
+    m_CachedPref: -212
+    m_ControlHash: -371814159
+    m_PrefName: Preview_InspectorPreview
+  m_LastInspectedObjectInstanceID: -1
+  m_LastVerticalScrollValue: 0
+  m_GlobalObjectId: 
+  m_InspectorMode: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_PreviewWindow: {fileID: 0}
+--- !u!114 &18
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_TitleContent:
+    m_Text: Project
+    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+    m_TextWithWhitespace: "Project\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: 1
+    y: 434
+    width: 389
+    height: 497
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_ContainerData: []
+    m_OverlaysVisible: 1
+  m_SearchFilter:
+    m_NameFilter: 
+    m_ClassNames: []
+    m_AssetLabels: []
+    m_AssetBundleNames: []
+    m_ReferencingInstanceIDs: 
+    m_SceneHandles: 
+    m_ShowAllHits: 0
+    m_SkipHidden: 0
+    m_SearchArea: 1
+    m_Folders: []
+    m_Globs: []
+    m_ProductIds: 
+    m_AnyWithAssetOrigin: 0
+    m_OriginalText: 
+    m_ImportLogFlags: 0
+    m_FilterByTypeIntersection: 0
+  m_ViewMode: 0
+  m_StartGridSize: 64
+  m_LastFolders: []
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: D:\git\CatBon
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 8e5f0000
+    m_LastClickedID: 24462
+    m_ExpandedIDs: 00000000d6b80000d8b80000dab80000dcb80000deb80000e0b80000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_TrimLeadingAndTrailingWhitespace: 0
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_AssetTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 00000000d6b80000d8b80000dab80000dcb80000deb80000e0b80000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_TrimLeadingAndTrailingWhitespace: 0
+      m_ClientGUIView: {fileID: 12}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_ListAreaState:
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c6230000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_TrimLeadingAndTrailingWhitespace: 0
+      m_ClientGUIView: {fileID: 0}
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+    m_NewAssetIndexInList: -1
+    m_ScrollPosition: {x: 0, y: 0}
+    m_GridSize: 64
+  m_SkipHiddenPackages: 0
+  m_DirectoriesAreaWidth: 115
+--- !u!114 &19
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Game
+    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+    m_TextWithWhitespace: "Game\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: -1920
+    y: 79
+    width: 1010
+    height: 643
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_ContainerData: []
+    m_OverlaysVisible: 1
+  m_SerializedViewNames: []
+  m_SerializedViewValues: []
+  m_PlayModeViewName: GameView
+  m_ShowGizmos: 0
+  m_TargetDisplay: 0
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_TargetSize: {x: 1920, y: 1080}
+  m_TextureFilterMode: 0
+  m_TextureHideFlags: 61
+  m_RenderIMGUI: 1
+  m_EnterPlayModeBehavior: 0
+  m_UseMipMap: 0
+  m_VSyncEnabled: 0
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    hZoomLockedByDefault: 0
+    vZoomLockedByDefault: 0
+    m_HBaseRangeMin: -960
+    m_HBaseRangeMax: 960
+    m_VBaseRangeMin: -540
+    m_VBaseRangeMax: 540
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 0
+    m_VSlider: 0
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 0
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 21
+      width: 1010
+      height: 622
+    m_Scale: {x: 0.5260417, y: 0.5260417}
+    m_Translation: {x: 504.99997, y: 311}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -959.9999
+      y: -591.2079
+      width: 1919.9999
+      height: 1182.4158
+    m_MinimalGUI: 1
+  m_defaultScale: 0.5260417
+  m_LastWindowPixelSize: {x: 1010, y: 643}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_XRRenderMode: 0
+  m_RenderTexture: {fileID: 0}
+  m_showToolbar: 1
+--- !u!114 &20
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12013, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Scene
+    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+    m_TextWithWhitespace: "Scene\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 24
+    width: 1010
+    height: 643
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData:
+    - dockPosition: 0
+      containerId: overlay-toolbar__top
+      displayed: 1
+      id: Tool Settings
+      index: 0
+      contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":-26.4000244140625},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":2,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: -26.400024}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 2
+      layout: 1
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 0
+      containerId: overlay-toolbar__top
+      displayed: 1
+      id: unity-grid-and-snap-toolbar
+      index: 1
+      contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":149.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 24, y: 149}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 1
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-toolbar__top
+      displayed: 1
+      id: unity-scene-view-toolbar
+      index: 0
+      contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 24, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 1
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-toolbar__top
+      displayed: 0
+      id: unity-search-toolbar
+      index: 1
+      contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":-24.0,"y":0.0},"m_FloatingSnapCorner":1,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: -24, y: 0}
+      snapCorner: 1
+      layout: 1
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 0
+      containerId: overlay-container--left
+      displayed: 1
+      id: unity-transform-toolbar
+      index: 0
+      contents: '{"m_Layout":2,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 24, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 2
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 0
+      containerId: overlay-container--left
+      displayed: 1
+      id: unity-component-tools
+      index: 1
+      contents: 
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 197}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 2
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 0
+      containerId: overlay-container--right
+      displayed: 1
+      id: Orientation
+      index: 0
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":-111.0,"y":86.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":1,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: -111, y: 86}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 1
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Light Settings
+      index: 0
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Camera
+      index: 1
+      contents: 
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Cloth Constraints
+      index: 1
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Cloth Collisions
+      index: 2
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Navmesh Display
+      index: 4
+      contents: 
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Agent Display
+      index: 5
+      contents: 
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Obstacle Display
+      index: 6
+      contents: 
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Occlusion Culling
+      index: 3
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Physics Debugger
+      index: 4
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Scene Visibility
+      index: 5
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Particles
+      index: 6
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Tilemap
+      index: 11
+      contents: 
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Tilemap Palette Helper
+      index: 12
+      contents: 
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/TrailRenderer
+      index: 7
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":48.0,"y":48.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 1
+      id: UnityEditor.SceneViewCameraOverlay
+      index: 11
+      contents: 
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 48, y: 10}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Open Tile Palette
+      index: 0
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":48.0,"y":48.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Tilemap Focus
+      index: 4
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":48.0,"y":48.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Path
+      index: 12
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":48.0,"y":48.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 0
+      containerId: overlay-toolbar__top
+      displayed: 0
+      id: Brush Attributes
+      index: 2
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-toolbar__top
+      displayed: 1
+      id: unity-scene-view-camera-mode-toolbar
+      index: 2
+      contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 24, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 1
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 0
+      containerId: overlay-toolbar__left
+      displayed: 0
+      id: Terrain Tools
+      index: 0
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 0
+      containerId: overlay-toolbar__left
+      displayed: 0
+      id: Brush Masks
+      index: 1
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--left
+      displayed: 0
+      id: Scene View/Lighting Visualization Colors
+      index: 0
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Tile Palette Clipboard
+      index: 1
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Tile Palette Brush Pick
+      index: 2
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Sprite Swap
+      index: 13
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: SceneView/CamerasOverlay
+      index: 8
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/PBR Validation Settings
+      index: 9
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--left
+      displayed: 1
+      id: Overlays/OverlayMenu
+      index: 1
+      contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 24, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 1
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: APV Overlay
+      index: 16
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 1
+      id: AINavigationOverlay
+      index: 10
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 24, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    m_ContainerData:
+    - containerId: overlay-toolbar__top
+      scrollOffset: 0
+    - containerId: overlay-toolbar__left
+      scrollOffset: 0
+    - containerId: overlay-container--left
+      scrollOffset: 0
+    - containerId: overlay-container--right
+      scrollOffset: 0
+    - containerId: overlay-toolbar__right
+      scrollOffset: 0
+    - containerId: overlay-toolbar__bottom
+      scrollOffset: 0
+    - containerId: Floating
+      scrollOffset: 0
+    m_OverlaysVisible: 1
+  m_WindowGUID: 728595ffd55ab95459bfe7d072303e0e
+  m_Gizmos: 0
+  m_OverrideSceneCullingMask: 6917529027641081856
+  m_SceneIsLit: 0
+  m_SceneLighting: 1
+  m_2DMode: 0
+  m_isRotationLocked: 0
+  m_PlayAudio: 0
+  m_AudioPlay: 0
+  m_DebugDrawModesUseInteractiveLightBakingData: 0
+  m_Position:
+    m_Target: {x: 1808.8347, y: -200.26389, z: 2548.4849}
+    speed: 2
+    m_Value: {x: 0, y: 0, z: 0}
+  m_RenderMode: 0
+  m_CameraMode:
+    drawMode: 0
+    name: Shaded
+    section: Shading Mode
+  m_ValidateTrueMetals: 0
+  m_DoValidateTrueMetals: 0
+  m_SceneViewState:
+    m_AlwaysRefresh: 0
+    showFog: 0
+    showSkybox: 0
+    showFlares: 1
+    showImageEffects: 1
+    showParticleSystems: 1
+    showVisualEffectGraphs: 1
+    m_FxEnabled: 1
+  m_Grid:
+    xGrid:
+      m_Fade:
+        m_Target: 0
+        speed: 2
+        m_Value: 0
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 0, y: 0}
+    yGrid:
+      m_Fade:
+        m_Target: 0
+        speed: 2
+        m_Value: 0
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 1, y: 1}
+    zGrid:
+      m_Fade:
+        m_Target: 0
+        speed: 2
+        m_Value: 0
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 1, y: 1}
+    m_ShowGrid: 0
+    m_GridAxis: 1
+    m_gridOpacity: 0.5
+  m_Rotation:
+    m_Target: {x: -0.16007882, y: -0.021618484, z: 0.0035067417, w: -0.9868603}
+    speed: 2
+    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_Size:
+    m_Target: 2056.2275
+    speed: 2
+    m_Value: 10
+  m_Ortho:
+    m_Target: 0
+    speed: 2
+    m_Value: 0
+  m_CameraSettings:
+    m_Speed: 1
+    m_SpeedNormalized: 0.5
+    m_SpeedMin: 0.01
+    m_SpeedMax: 2
+    m_EasingEnabled: 1
+    m_EasingDuration: 0.4
+    m_AccelerationEnabled: 1
+    m_FieldOfViewHorizontalOrVertical: 60
+    m_NearClip: 0.03
+    m_FarClip: 10000
+    m_DynamicClip: 1
+    m_OcclusionCulling: 0
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewOrtho: 0
+  m_Viewpoint:
+    m_SceneView: {fileID: 20}
+    m_CameraOverscanSettings:
+      m_Opacity: 50
+      m_Scale: 1
+  m_ReplacementShader: {fileID: 0}
+  m_ReplacementString: 
+  m_SceneVisActive: 1
+  m_LastLockedObject: {fileID: 0}
+  m_LastDebugDrawMode: 35
+  m_ViewIsLockedToObject: 0
+--- !u!114 &21
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12061, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Hierarchy
+    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+    m_TextWithWhitespace: "Hierarchy\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: 1
+    y: 24
+    width: 389
+    height: 384
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_ContainerData: []
+    m_OverlaysVisible: 1
+  m_SceneHierarchy:
+    m_TreeViewState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 34fefeff
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_TrimLeadingAndTrailingWhitespace: 0
+        m_ClientGUIView: {fileID: 11}
+      m_SearchString: 
+    m_ExpandedScenes: []
+    m_CurrenRootInstanceID: 0
+    m_LockTracker:
+      m_IsLocked: 0
+    m_CurrentSortingName: TransformSorting
+  m_WindowGUID: 09322b2c02d805d4baca9101872686c3
