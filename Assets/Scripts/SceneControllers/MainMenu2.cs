@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Services.Monetization.Subscription;
+using UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,9 +20,11 @@ public class MainMenu2 : MonoBehaviour
     public string[] scenes;
     public SceneMusicContainer[] sceneThemes;
     public AudioClip[] helloSound;
-
-
+    
     public static MainMenu2 Instance;
+
+    [SerializeField] private SubscribeWindow subscribeWindow;
+    
     private ISubscriptionService subscriptionService;
 
     public void Constructor(ISubscriptionService subscriptionService)
@@ -32,12 +35,26 @@ public class MainMenu2 : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
+        HideSubscribeWindow();
     }
 
     private void Start()
     {
         ResetScreen();
         SoundMaster.Instance.PlayMusic(0);
+    }
+
+    public void ShowSubscribeWindow()
+    {
+        subscribeWindow.gameObject.SetActive(true);
+        subscribeWindow.Show();
+    }
+
+    public void HideSubscribeWindow()
+    {
+        subscribeWindow.gameObject.SetActive(false);
+        subscribeWindow.Hide();
     }
 
     public void PlayHello()
@@ -88,6 +105,7 @@ public class MainMenu2 : MonoBehaviour
             if(!subscriptionService.IsThereSubscription())
             {
                 Debug.Log($"Купите подписку!!!");
+                ShowSubscribeWindow();
                 return;
             }
             

@@ -12,6 +12,9 @@ namespace Infractructure.EntryPoints
         {
             var subscriptionService = GetSubscriptionService();
             mainMenu.Constructor(subscriptionService);
+
+            if (!subscriptionService.IsThereSubscription())
+                mainMenu.ShowSubscribeWindow();
         }
 
         private ISubscriptionService GetSubscriptionService() =>
