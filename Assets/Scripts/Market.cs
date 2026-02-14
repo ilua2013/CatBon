@@ -19,7 +19,7 @@ public class Market : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        UnlockAllGames();
+        //UnlockAllGames();
     }
     public void UnlockGame(string[] ids, bool autosave = true)
     {
