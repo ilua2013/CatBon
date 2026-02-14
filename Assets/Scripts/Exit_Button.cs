@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class Exit_Button : MonoBehaviour
 {
-   
-
     public void OnClick()
     {
         Application.Quit();

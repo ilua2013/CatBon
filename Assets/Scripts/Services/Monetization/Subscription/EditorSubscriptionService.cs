@@ -4,7 +4,7 @@ namespace Services.Monetization.Subscription
     {
         public bool IsThereSubscription()
         {
-            return true;
+            return false;
         }
     }
 }

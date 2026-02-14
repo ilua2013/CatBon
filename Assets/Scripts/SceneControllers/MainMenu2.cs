@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Services.Monetization.Subscription;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,7 +20,15 @@ public class MainMenu2 : MonoBehaviour
     public SceneMusicContainer[] sceneThemes;
     public AudioClip[] helloSound;
 
+
     public static MainMenu2 Instance;
+    private ISubscriptionService subscriptionService;
+
+    public void Constructor(ISubscriptionService subscriptionService)
+    {
+        this.subscriptionService = subscriptionService;
+    }
+
     private void Awake()
     {
         Instance = this;
@@ -29,7 +38,6 @@ public class MainMenu2 : MonoBehaviour
     {
         ResetScreen();
         SoundMaster.Instance.PlayMusic(0);
-        Market.Instance.LoadUnlockedScenes();
     }
 
     public void PlayHello()
@@ -39,11 +47,12 @@ public class MainMenu2 : MonoBehaviour
 
     private void OnEnable()
     {
-        if(SoundMaster.Instance) SoundMaster.Instance.PlayMusic(0);
+        if (SoundMaster.Instance) SoundMaster.Instance.PlayMusic(0);
     }
+
     public void ResetScreen()
     {
-        if(Global.lastScreen == -1)
+        if (Global.lastScreen == -1)
         {
             ShowMainMenu();
         }
@@ -71,21 +80,20 @@ public class MainMenu2 : MonoBehaviour
 
     public void StartGame(string id)
     {
-        for (int i = 0; i < scenes.Length; i++)
+        for (var i = 0; i < scenes.Length; i++)
         {
-            if (scenes[i].Contains(id + "_"))
+            if (!scenes[i].Contains(id + "_"))
+                continue;
+            
+            if(!subscriptionService.IsThereSubscription())
             {
-                if (Market.Instance.IsGameUnlocked(id))
-                {
-                    SoundMaster.Instance.PlayMusic(sceneThemes[i].musicId);
-                    Global.lastScreen = int.Parse(id.Substring(0, id.IndexOf("_"))) - 1;
-                    LoadScene(scenes[i]);
-                }
-                else
-                {
-                    Market.Instance.ShowBuyWinow(id);
-                }
+                Debug.Log($"Купите подписку!!!");
+                return;
             }
+            
+            SoundMaster.Instance.PlayMusic(sceneThemes[i].musicId);
+            Global.lastScreen = int.Parse(id.Substring(0, id.IndexOf("_"))) - 1;
+            LoadScene(scenes[i]);
         }
     }
 
