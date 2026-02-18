@@ -39,7 +39,7 @@ public class MainMenu2 : MonoBehaviour
         HideSubscribeWindow();
     }
 
-    private void Start()
+    private void Start() 
     {
         ResetScreen();
         SoundMaster.Instance.PlayMusic(0);
