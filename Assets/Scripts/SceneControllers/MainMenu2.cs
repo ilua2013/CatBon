@@ -106,7 +106,6 @@ public class MainMenu2 : MonoBehaviour
             if(!subscriptionService.IsThereSubscription())
             {
                 Debug.Log($"Купите подписку!!!");
-                ShowSubscribeWindow();
                 return;
             }
             

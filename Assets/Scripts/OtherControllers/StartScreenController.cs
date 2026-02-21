@@ -39,6 +39,8 @@ public class StartScreenController : MonoBehaviour
                 car.sprite = dayCar;
                 logo.sprite = dayLogo;
             }
+            
+            mainMenu2.HideSubscribeWindow();
             Global.RenewCoroutine(this, ref routine, DelayedSkip());
         }
         else
@@ -54,6 +56,7 @@ public class StartScreenController : MonoBehaviour
         canvasFader.Out(() => { gameObject.SetActive(false); });
         if (Global.appFirstStart) animator.SetTrigger("Out");
         Global.appFirstStart = false;
+        mainMenu2.ShowSubscribeWindow();
         //mainMenu2.PlayHello();
     }
     private IEnumerator DelayedSkip()
