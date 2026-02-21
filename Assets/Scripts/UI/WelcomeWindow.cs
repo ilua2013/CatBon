@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using UI.Elements;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -23,7 +24,8 @@ namespace UI
         
         [Space]
         [SerializeField] private CanvasGroup frame4;
-        [SerializeField] private Button nextFrame5;
+        [SerializeField] private Button backFrame3;
+        [SerializeField] private HoldProgressBarButton nextFrame5;
         
         [Space]
         [SerializeField] private CanvasGroup frame5;
@@ -51,7 +53,8 @@ namespace UI
             nextFrame2.onClick.RemoveListener(ShowFrame2);
             nextFrame3.onClick.RemoveListener(ShowFrame3);
             nextFrame4.onClick.RemoveListener(ShowFrame4);
-            nextFrame5.onClick.RemoveListener(ShowFrame5);
+            nextFrame5.OnFilling -= ShowFrame5;
+            backFrame3.onClick.RemoveListener(BackToFrame3);
             subscribing.onClick.RemoveListener(Subscribing);
         }
 
@@ -108,12 +111,28 @@ namespace UI
             nextFrame4.onClick.RemoveListener(ShowFrame4);
             await HideFrame(frame3);
             await ShowFrame(frame4);
-            nextFrame5.onClick.AddListener(ShowFrame5);
+            backFrame3.onClick.AddListener(BackToFrame3);
+            nextFrame5.OnFilling += ShowFrame5;
+            nextFrame5.SetFillAmount(0f);
+            nextFrame5.SetActivated(true);
+        }
+
+        private async void BackToFrame3()
+        {
+            nextFrame5.OnFilling -= ShowFrame5;
+            nextFrame5.SetActivated(false);
+            nextFrame5.SetFillAmount(0f);
+            backFrame3.onClick.RemoveListener(BackToFrame3);
+            await HideFrame(frame4);
+            await ShowFrame(frame3);
+            nextFrame4.onClick.AddListener(ShowFrame4);
         }
         
         private async void ShowFrame5()
         {
-            nextFrame5.onClick.RemoveListener(ShowFrame5);
+            nextFrame5.OnFilling -= ShowFrame5;
+            nextFrame5.SetActivated(false);
+            nextFrame5.SetFillAmount(1f);
             await HideFrame(frame4);
             await ShowFrame(frame5);
             subscribing.onClick.AddListener(Subscribing);

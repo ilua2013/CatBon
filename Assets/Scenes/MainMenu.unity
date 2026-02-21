@@ -5780,14 +5780,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 479465649}
     m_Modifications:
-    - target: {fileID: 1403119064957125924, guid: 8c9aea6a60993934ea1a9801939046a2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4959659148457460972, guid: 8c9aea6a60993934ea1a9801939046a2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6525426760205309872, guid: 8c9aea6a60993934ea1a9801939046a2, type: 3}
       propertyPath: m_Name
       value: WelcomWindow
@@ -5870,18 +5862,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6547075372145401368, guid: 8c9aea6a60993934ea1a9801939046a2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6846737231369540475, guid: 8c9aea6a60993934ea1a9801939046a2, type: 3}
-      propertyPath: showHideTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6846737231369540475, guid: 8c9aea6a60993934ea1a9801939046a2, type: 3}
-      propertyPath: showHideSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8511290281039788104, guid: 8c9aea6a60993934ea1a9801939046a2, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
