@@ -1,90 +1,127 @@
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace UI
 {
     public class WelcomeWindow : MonoBehaviour
     {
-        [SerializeField] private GameObject frame1;
+        [FormerlySerializedAs("showHideTime")] [SerializeField] private float showHideSpeed;
+        
+        [Space]
+        [SerializeField] private CanvasGroup frame1;
         [SerializeField] private Button nextFrame2;
         
         [Space]
-        [SerializeField] private GameObject frame2;
+        [SerializeField] private CanvasGroup frame2;
         [SerializeField] private Button nextFrame3;
         
         [Space]
-        [SerializeField] private GameObject frame3;
+        [SerializeField] private CanvasGroup frame3;
         [SerializeField] private Button nextFrame4;
         
         [Space]
-        [SerializeField] private GameObject frame4;
+        [SerializeField] private CanvasGroup frame4;
         [SerializeField] private Button nextFrame5;
         
         [Space]
-        [SerializeField] private GameObject frame5;
+        [SerializeField] private CanvasGroup frame5;
         [SerializeField] private Button subscribing;
 
         public void Show()
         {
-            frame1.SetActive(false);
-            frame2.SetActive(false);
-            frame3.SetActive(false);
-            frame4.SetActive(false);
-            frame5.SetActive(false);
+            frame1.gameObject.SetActive(false);
+            frame2.gameObject.SetActive(false);
+            frame3.gameObject.SetActive(false);
+            frame4.gameObject.SetActive(false);
+            frame5.gameObject.SetActive(false);
 
             ShowFrame1();
         }
 
         public void Hide()
         {
+            frame1.gameObject.SetActive(false);
+            frame2.gameObject.SetActive(false);
+            frame3.gameObject.SetActive(false);
+            frame4.gameObject.SetActive(false);
+            frame5.gameObject.SetActive(false);
             
+            nextFrame2.onClick.RemoveListener(ShowFrame2);
+            nextFrame3.onClick.RemoveListener(ShowFrame3);
+            nextFrame4.onClick.RemoveListener(ShowFrame4);
+            nextFrame5.onClick.RemoveListener(ShowFrame5);
+            subscribing.onClick.RemoveListener(Subscribing);
         }
 
-        private void ShowFrame1()
+        private async Task ShowFrame(CanvasGroup frame)
         {
-            frame1.SetActive(true);
+            frame.alpha = 0f;
+            frame.gameObject.SetActive(true);
+            while (!Mathf.Approximately(frame.alpha, 1f))
+            {
+                await Task.Delay((int)(Time.deltaTime * 1000));
+                frame.alpha += showHideSpeed * Time.deltaTime;
+            }
+        }
+        
+        private async Task HideFrame(CanvasGroup frame)
+        {
+            frame.alpha = 1f;
+            
+            while (!Mathf.Approximately(frame.alpha, 0f))
+            {
+                await Task.Delay((int)(Time.deltaTime * 1000));
+                frame.alpha -= showHideSpeed * Time.deltaTime;
+            }
+            
+            frame.gameObject.SetActive(false);
+        }
+        
+        private async void ShowFrame1()
+        {
             nextFrame2.onClick.AddListener(ShowFrame2);
+            await ShowFrame(frame1);
         }
-
-        private void ShowFrame2()
+        
+        private async void ShowFrame2()
         {
-            frame1.SetActive(false);
             nextFrame2.onClick.RemoveListener(ShowFrame2);
             
-            frame2.SetActive(true);
+            await HideFrame(frame1);
+            await ShowFrame(frame2);
+            
             nextFrame3.onClick.AddListener(ShowFrame3);
         }
 
-        private void ShowFrame3()
+        private async void ShowFrame3()
         {
-            frame2.SetActive(false);
             nextFrame3.onClick.RemoveListener(ShowFrame3);
-            
-            frame3.SetActive(true);
+            await HideFrame(frame2);
+            await ShowFrame(frame3);
             nextFrame4.onClick.AddListener(ShowFrame4);
         }
         
-        private void ShowFrame4()
+        private async void ShowFrame4()
         {
-            frame3.SetActive(false);
-            nextFrame3.onClick.RemoveListener(ShowFrame4);
-            
-            frame4.SetActive(true);
+            nextFrame4.onClick.RemoveListener(ShowFrame4);
+            await HideFrame(frame3);
+            await ShowFrame(frame4);
             nextFrame5.onClick.AddListener(ShowFrame5);
         }
         
-        private void ShowFrame5()
+        private async void ShowFrame5()
         {
-            frame4.SetActive(false);
-            nextFrame3.onClick.RemoveListener(ShowFrame5);
-
-            frame5.SetActive(true);
+            nextFrame5.onClick.RemoveListener(ShowFrame5);
+            await HideFrame(frame4);
+            await ShowFrame(frame5);
             subscribing.onClick.AddListener(Subscribing);
         }
 
-        private void Subscribing()
+        private async void Subscribing()
         {
-            frame5.SetActive(false);
+            await HideFrame(frame5);
             Debug.Log($"Подписка оформлена!");
         }
     }
