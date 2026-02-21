@@ -4,6 +4,7 @@ using Services.Monetization.Subscription;
 using UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 [System.Serializable]
 public class SceneMusicContainer
@@ -23,7 +24,7 @@ public class MainMenu2 : MonoBehaviour
     
     public static MainMenu2 Instance;
 
-    [SerializeField] private SubscribeWindow subscribeWindow;
+    [FormerlySerializedAs("subscribeWindow")] [SerializeField] private WelcomeWindow welcomeWindow;
     
     private ISubscriptionService subscriptionService;
 
@@ -47,14 +48,14 @@ public class MainMenu2 : MonoBehaviour
 
     public void ShowSubscribeWindow()
     {
-        subscribeWindow.gameObject.SetActive(true);
-        subscribeWindow.Show();
+        welcomeWindow.gameObject.SetActive(true);
+        welcomeWindow.Show();
     }
 
     public void HideSubscribeWindow()
     {
-        subscribeWindow.gameObject.SetActive(false);
-        subscribeWindow.Hide();
+        welcomeWindow.gameObject.SetActive(false);
+        welcomeWindow.Hide();
     }
 
     public void PlayHello()

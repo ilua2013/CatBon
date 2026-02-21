@@ -4011,7 +4011,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6469830978173878417
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4910,7 +4910,7 @@ GameObject:
   - component: {fileID: 6547075372145401368}
   - component: {fileID: 6846737231369540475}
   m_Layer: 5
-  m_Name: SubscribeWindow
+  m_Name: WelcomWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4953,7 +4953,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 470a9d62794a430195829894f5c48cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrangeButton: {fileID: 0}
+  frame1: {fileID: 4959659148457460972}
+  nextFrame2: {fileID: 5592885593585309912}
+  frame2: {fileID: 1403119064957125924}
+  nextFrame3: {fileID: 4027130490065184299}
+  frame3: {fileID: 8511290281039788104}
+  nextFrame4: {fileID: 8575338680249494163}
+  frame4: {fileID: 7236857870548417872}
+  nextFrame5: {fileID: 8633316801315192883}
+  frame5: {fileID: 5325982610180278286}
+  subscribing: {fileID: 4847036400366886275}
 --- !u!1 &6585047122829570201
 GameObject:
   m_ObjectHideFlags: 0
@@ -5591,7 +5600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7111610174359883775
 RectTransform:
   m_ObjectHideFlags: 0
