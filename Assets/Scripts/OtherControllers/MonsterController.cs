@@ -8,7 +8,7 @@ public class MonsterController : MonoBehaviour
     public Sprite[] sprites;
     public Image image;
     public float animationDelay = 0.3f;
-    public int framesCount = 12;
+    public int framesCount = 6;
 
     private IEnumerator animationRoutine;
     public void StartAnimation()
@@ -37,6 +37,6 @@ public class MonsterController : MonoBehaviour
     private void SetSprite(Sprite sprite)
     {
         image.sprite = sprite;
-        //image.rectTransform.sizeDelta = new Vector2(sprite.texture.width, sprite.texture.height);
+        image.rectTransform.sizeDelta = new Vector2(sprite.texture.width, sprite.texture.height);
     }
 }

@@ -111,33 +111,24 @@ public class WashTheAnimal_4_3_Controller : BaseController<WashTheAnimal_4_3_Con
             CatHelper.Instance.PlayAudio(showerSound);
             brush.Hide();
             shower.gameObject.SetActive(true);
-            shower.In(); 
-            Invoke("OffWash",8f);
+            shower.In();
             while (_currAnimal.FoamProgress > 0)
             {
                 if (_showerInHand)
                 {
                     //print("_showerInHand");
-                    ///_currAnimal.FoamProgress -= showerProgressSpeed;
+                    _currAnimal.FoamProgress -= showerProgressSpeed;
                 }
                 yield return null;
             }
             _currAnimal.ShowSparkles();
-           
             shower.Out();
             _stage = 4;
         }
         NextLevel();
         yield break;
     }
-public void OffWash()
-{
-    _currAnimal.FoamProgress=-0.1f;
-           _currAnimal.ShowSparkles();
-    Debug.Log("+++++");
-     shower.Out();
-            _stage = 4;
-}
+
     public void GenerateAnimal()
     {
         if (_currAnimal) _currAnimal.gameObject.SetActive(false);

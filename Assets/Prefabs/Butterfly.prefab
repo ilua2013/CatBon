@@ -264,7 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationDuration: 0.3
   movingSpeed: 2
-  randomFactor: 2
+  randomFactor: 0.2
   showhideAnimationDuration: 0.5
   isFlying: 1
   isAnimating: 1

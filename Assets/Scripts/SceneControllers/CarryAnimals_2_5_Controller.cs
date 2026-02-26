@@ -8,16 +8,13 @@ public class AnimalContainer
     public string name;
     public SoundContainer[] countClips;
     public GameObject objectToClone;
-    
 }
 
 
 public class CarryAnimals_2_5_Controller : BaseController<CarryAnimals_2_5_Controller>
 {
     public CustomNumber customNumber;
-    public AudioClip nev;
     public RectTransform rightArea;
-    public RectTransform leftArea;
     public RectTransform[] leftSlots;
     public RectTransform[] rightSlots;
     public AnimalContainer[] availableAnimals;
@@ -27,12 +24,12 @@ public class CarryAnimals_2_5_Controller : BaseController<CarryAnimals_2_5_Contr
     public RectTransform animalsParent;
     public SoundContainer[] numbers;
 
-   public bool fin;
-     int t; 
+
+
     private int _animalsCarried = 0;
     private DragNDropCard[] _currentAnimals;
-    public List<RectTransform> _availableRightSots;
-    public List<RectTransform> _availableLeftSots;
+    private List<RectTransform> _availableRightSots;
+    private List<RectTransform> _availableLeftSots;
 
     private void Start()
     {
@@ -49,7 +46,7 @@ public class CarryAnimals_2_5_Controller : BaseController<CarryAnimals_2_5_Contr
             currentAnimalType = Random.Range(0, availableAnimals.Length);
         }
         animalsLeft = Random.Range(3, 11);
-        customNumber.SetNumber(animalsLeft);
+        customNumber.SetNumber(0);
         CatHelper.Instance.ShowText($"Перенеси {availableAnimals[currentAnimalType].countClips[animalsLeft - 1].name} на другой луг.", 4f);
         if(availableAnimals[currentAnimalType].countClips[animalsLeft - 1].phrases.Length > 0)
         {
@@ -84,7 +81,7 @@ public class CarryAnimals_2_5_Controller : BaseController<CarryAnimals_2_5_Contr
     {
         CatHelper.Instance.ShowText(winText);
         SoundMaster.Instance.PlayWin();
-        StartCoroutine(AutoExit(6f));
+        StartCoroutine(AutoExit());
     }
 
     [Header("Cat phrases")]
@@ -94,11 +91,11 @@ public class CarryAnimals_2_5_Controller : BaseController<CarryAnimals_2_5_Contr
 
     public void NextLevel()
     {
-        //DeactivateAnimals();
+        DeactivateAnimals();
         currentLevel++;
         if(currentLevel > 4)
         {
-            Invoke("Win",4f);
+            Win();
         }
         else
         {
@@ -113,7 +110,6 @@ public class CarryAnimals_2_5_Controller : BaseController<CarryAnimals_2_5_Contr
         if(animalsLeft == 0)
         {
             NextLevel();
-            fin=true;
             return true;
         }
         return false;
@@ -122,85 +118,27 @@ public class CarryAnimals_2_5_Controller : BaseController<CarryAnimals_2_5_Contr
     {
         dragNDropCard.rectTransform.SetParent(animalsParent);
         dragNDropCard.rectTransform.SetAsLastSibling();
-         customNumber.SetScleM();
-        
-
     }
     public void OnCardDrop(DragNDropCard dragNDropCard)
     {
         if (rightArea.ContainsPointScalable(dragNDropCard.rectTransform.position))
-        {   
-          
-            t = Random.Range(0, _availableRightSots.Count);
+        {
+            int t = Random.Range(0, _availableRightSots.Count);
             dragNDropCard.rectTransform.SetParent(_availableRightSots[t]);
-              customNumber.SetScleN();
-            if(dragNDropCard.C_Parent==null)
-            {
             dragNDropCard.GoToPosition(_availableRightSots[t].position, () => { dragNDropCard.SetDefaultScale(); });
-            dragNDropCard.C_Parent=_availableRightSots[t]; 
-            }
-            else
-            {
-            dragNDropCard.rectTransform.SetParent(dragNDropCard.C_Parent);
-            dragNDropCard.GoToPosition(dragNDropCard.C_Parent.position, () => { dragNDropCard.SetDefaultScale(); });
-            }
-           
-            if(dragNDropCard.name!="lefted")
-            {
-            
+            dragNDropCard.draggable = false;
+            _availableRightSots.RemoveAt(t);
             animalsLeft--;
             _animalsCarried++;
-            dragNDropCard.name="lefted"; 
-            _availableRightSots.RemoveAt(t);
-            }
-            if(animalsLeft >= 0)
-            {
             CatHelper.Instance.PlayAudio(numbers[_animalsCarried].audios);
             CatHelper.Instance.ShowText(numbers[_animalsCarried].name, 1f);
-            //customNumber.SetNumber(_animalsCarried);
+            customNumber.SetNumber(_animalsCarried);
             CheckRules();
-            }
-            else
-            {
-                  CatHelper.Instance.ShowText("Неверно...", 1f);
-                           CatHelper.Instance.PlayAudio(nev);
-                StopAllCoroutines();
-            }
         }
         else
         {
             dragNDropCard.rectTransform.SetParent(dragNDropCard.defaultParent);
             dragNDropCard.GoToPosition(dragNDropCard.defaultAnchoredPosition, () => { dragNDropCard.SetDefaultScale(); });
-        }
-
-
-        if (leftArea.ContainsPointScalable(dragNDropCard.rectTransform.position))
-        {
-            //int t = Random.Range(0, _availableRightSots.Count);
-            //dragNDropCard.rectTransform.SetParent(_availableRightSots[t]);
-            //dragNDropCard.GoToPosition(_availableRightSots[t].position, () => { dragNDropCard.SetDefaultScale(); });
-            //dragNDropCard.draggable = false;
-           // _availableRightSots.RemoveAt(t);
-           if(animalsLeft >= 0)
-            {
-                if(fin==true)
-                {
-                CatHelper.Instance.ShowText("Неверно", 1f);
-                         CatHelper.Instance.PlayAudio(nev);
-                StopAllCoroutines();
-                }
-            }
-
-           if(dragNDropCard.name=="lefted")
-            {
-               animalsLeft++;
-               dragNDropCard.name="right"; 
-              _animalsCarried--;
-              _availableRightSots.Add(dragNDropCard.C_Parent);
-              dragNDropCard.C_Parent=null;
-            }
-            CheckRules();
-          
         }
     }
 
@@ -215,7 +153,7 @@ public class CarryAnimals_2_5_Controller : BaseController<CarryAnimals_2_5_Contr
             _currentAnimals = null;
         }
         _animalsCarried = 0;
-        //customNumber.SetNumber(_animalsCarried);
+        customNumber.SetNumber(_animalsCarried);
         GenerateNumber();
         GenerateAnimals();
         _availableRightSots = new List<RectTransform>();
@@ -235,10 +173,10 @@ public class CarryAnimals_2_5_Controller : BaseController<CarryAnimals_2_5_Contr
 
     private IEnumerator DelayedRestart()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(1.5f);
         CatHelper.Instance.ShowText(nextLevelText);
-        SoundMaster.Instance.PlayNextLevel();
-        yield return new WaitForSeconds(2.5f);
+        SoundMaster.Instance.PlayNextLevel(1f);
+        yield return new WaitForSeconds(4f);
         Restart();
     }
 }

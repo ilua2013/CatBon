@@ -7,7 +7,7 @@ public class ShowerController : MonoBehaviour
     public Animator animator;
     public int id;
     public ParticleSystem pSystem;
-    public AudioSource A_S;
+
     private ParticleSystem.EmissionModule emissionModule;
 
     private float _defaultEmissionRate;
@@ -36,7 +36,6 @@ public class ShowerController : MonoBehaviour
     private void OnMouseDown()
     {
         StartShower();
-         A_S.Play();
         onMouseDown(id);
     }
     private void OnMouseUp()
@@ -49,12 +48,10 @@ public class ShowerController : MonoBehaviour
     {
         animator.ResetTrigger("out");
         animator.SetTrigger("in");
-       
     }
     public void Out()
     {
         StopShower();
-        A_S.Stop(); 
         animator.ResetTrigger("in");
         animator.SetTrigger("out");
     }

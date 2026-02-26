@@ -21,19 +21,13 @@ public static class Global
     public static readonly Color[] colors9 = new Color[] {
         new Color(254f/255f, 32f/255f, 43f/255f, 1f), // red
         new Color(1f, 151f/255f, 32f/255f, 1f), // orange
-        new Color(1f, 244f/255f, 32f/255f, 1f), // yellow      
+        new Color(1f, 244f/255f, 32f/255f, 1f), // yellow
         new Color(44f/255f, 243f/255f, 91f/255f, 1f), // green
         new Color(0f, 1f, 241f/255f, 1f), // light blue
         new Color(0f, 0f, 254f/255f, 1f), // blue
         new Color(189f/255f, 97f/255f, 255f/255f, 1f), // purple
-            
-        new Color(1f, 1f, 1f, 1f), // black
-        new Color(0.15f, 0.15f, 0.15f, 1f), // white 
-  
-        new Color(0.9433962f, 0.4049484f, 0.6929883f, 1f),// red 
-       
-        new Color(0.6603774f, 0.6510f, 0.6510f, 1f), // gray 
-        new Color(0.3019608f, 0.1333333f, 0.05490196f, 1f), // red
+        new Color(1f, 1f, 1f, 1f), // white
+        new Color(0.15f, 0.15f, 0.15f, 1f), // black
     };
 
     public static readonly Color[] colors7 = new Color[] {
@@ -45,53 +39,31 @@ public static class Global
         new Color(0f, 0f, 254f/255f, 1f), // blue
         new Color(189f/255f, 97f/255f, 255f/255f, 1f), // purple
     };
-    
-    public static readonly Color[] colorsc = new Color[] {
-        new Color(254f/255f, 32f/255f, 43f/255f, 1f), // red
-        new Color(1f, 151f/255f, 32f/255f, 1f), // orange
-        new Color(1f, 244f/255f, 32f/255f, 1f), // yellow
-        new Color(44f/255f, 243f/255f, 91f/255f, 1f), // green
-        new Color(0f, 1f, 241f/255f, 1f), // light blue
-        new Color(0f, 0f, 254f/255f, 1f), // blue
-        new Color(189f/255f, 97f/255f, 255f/255f, 1f), // purple
-        new Color(1f, 1f, 1f, 1f), // black
-        new Color(0.15f, 0.15f, 0.15f, 1f), // white
-        new Color(0.3019608f, 0.1333333f, 0.05490196f, 1f), // red
-
-    };
 
     public static readonly string[] colorsNamesGenitive = new string[]
     {
         "красного",
         "оранжевого",
         "жёлтого",
-        "зелёного",
+        "зеленого",
         "голубого",
         "синего",
         "фиолетового",
         "белого",
-        "чёрного",
-         "розового",
-         "cерого",
-          "коричневого",
-
+        "черного",
     };
 
     public static readonly string[] colorsNames = new string[]
     {
         "Красный",
         "Оранжевый",
-        "Жёлтый",
-        "Зелёный",
+        "Желтый",
+        "Зеленый",
         "Голубой",
         "Синий",
         "Фиолетовый",
         "Белый",
-        "Чёрный",
-        "Розовый",
-         "Серый",
-         "Коричневый"
-         
+        "Черный"
     };
 
     public static string GetColorName(Color color)
@@ -158,25 +130,6 @@ public static class Global
             if (availableColors.Count == 0)
             {
                 result.Add(colors9[UnityEngine.Random.Range(0, colorsCount)]);
-            }
-            else
-            {
-                int colorIndex = UnityEngine.Random.Range(0, availableColors.Count);
-                result.Add(availableColors[colorIndex]);
-                availableColors.RemoveAt(colorIndex);
-            }
-        }
-        return result;
-    }
-     public static List<Color> GetRandomColorsCar(int listLength, int colorsCount)
-    {
-        List<Color> result = new List<Color>(listLength);
-        List<Color> availableColors = new List<Color>(colorsc.SubArray(0, colorsCount));
-        for (int i = 0; i < listLength; i++)
-        {
-            if (availableColors.Count == 0)
-            {
-                result.Add(colorsc[UnityEngine.Random.Range(0, colorsCount)]);
             }
             else
             {

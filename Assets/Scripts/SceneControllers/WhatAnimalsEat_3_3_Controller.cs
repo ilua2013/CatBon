@@ -25,18 +25,14 @@ public class WhatAnimalsEat_3_3_Controller : BaseController<WhatAnimalsEat_3_3_C
 
 
     public AnimalFoodContainer[] availableAnimals;
-    private  static int _currentAnimal = 0;
-    public string Scene;
-    public bool Fin;
-    public  Sprite[] _availableFood;
+    private int _currentAnimal = 0;
+    private Sprite[] _availableFood;
 
     [Header("Cat phrases")]
     public string rulesText;
     public string winText;
     public string nextLevelText;
-    public static int nextLevel;
     public string wrongAnswerText;
-    public bool s;
 
     [Header("Audio")]
     public AudioClip[] startAudio;
@@ -44,26 +40,17 @@ public class WhatAnimalsEat_3_3_Controller : BaseController<WhatAnimalsEat_3_3_C
 
     private void Start()
     {
-        if( _currentAnimal==0)
-        {
-             _currentAnimal=Random.Range(0,10);
-        }
-         Debug.Log(_currentAnimal);
         _availableFood = new Sprite[availableAnimals.Length];
         for (int i = 0; i < availableAnimals.Length; i++)
         {
             _availableFood[i] = availableAnimals[i].food;
         }
-        if(s==true)
-        {
         CatHelper.Instance.ShowText(rulesText, 8f);
         CatHelper.Instance.defaultText = rulesText;
-        
         CatHelper.Instance.defaultAudio = startAudio.Random();
         CatHelper.Instance.audioSource.clip = startAudio.Random();
         CatHelper.Instance.audioSource.Play();
-        }
-        //availableAnimals.Shuffle();
+        availableAnimals.Shuffle();
         Restart();
     }
 
@@ -104,24 +91,16 @@ public class WhatAnimalsEat_3_3_Controller : BaseController<WhatAnimalsEat_3_3_C
     }
     public void NextLevel()
     {
-  
         SetButtonsInteractive(false);
-        nextLevel++;
         _currentAnimal++;
-        if(_currentAnimal>10)
-        {
-          _currentAnimal=0;
-        }
-        if (nextLevel >10)
+        if (_currentAnimal > availableAnimals.Length - 1)
         {
             Win();
         }
         else
         {
             CatHelper.Instance.ShowText(nextLevelText, 4f);
-
             if (SoundMaster.Instance) SoundMaster.Instance.PlayNextLevel();
-            SoundMaster.Instance.PlayNextLevel();
             StartCoroutine(DelayedRestart());
         }
     }
@@ -129,8 +108,6 @@ public class WhatAnimalsEat_3_3_Controller : BaseController<WhatAnimalsEat_3_3_C
     {
         CatHelper.Instance.ShowText(winText);
         SoundMaster.Instance.PlayWin();
-        _currentAnimal=0;
-         nextLevel=0;
         StartCoroutine(AutoExit());
     }
     public override void Restart()
@@ -144,7 +121,6 @@ public class WhatAnimalsEat_3_3_Controller : BaseController<WhatAnimalsEat_3_3_C
 
     private void GenerateAnimal()
     {
-
         animalImage.sprite = availableAnimals[_currentAnimal].animal;
         animalImage.rectTransform.sizeDelta
             = new Vector2(availableAnimals[_currentAnimal].animal.rect.width, availableAnimals[_currentAnimal].animal.rect.height);
@@ -201,7 +177,7 @@ public class WhatAnimalsEat_3_3_Controller : BaseController<WhatAnimalsEat_3_3_C
     private IEnumerator DelayedRestart()
     {
         yield return new WaitForSeconds(2f);
-        Application.LoadLevel(Scene);
+        Restart();
     }
     void SetButtonsInteractive(bool state)
     {

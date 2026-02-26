@@ -10,7 +10,7 @@ public class AllColors_1_1_Controller : BaseController<AllColors_1_1_Controller>
     public string[] helperTexts = new string[9];
     public float maxRandomDistance = 10f;
     public float maxRandomRotation = 20f;
-    public Sprite[]  colors;
+    public List<Color> colors;
 
     public string startText = "Нажимай на цвета";
     [Header("Audio")]
@@ -26,7 +26,7 @@ public class AllColors_1_1_Controller : BaseController<AllColors_1_1_Controller>
 
     public override void Restart()
     {
-        //colors = Global.GetRandomColors(9, 12);
+        colors = Global.GetRandomColors(9, 9);
         GenerateCards();
         CatHelper.Instance.defaultText = startText;
         CatHelper.Instance.defaultAudio = startAudio.Random();
@@ -36,13 +36,12 @@ public class AllColors_1_1_Controller : BaseController<AllColors_1_1_Controller>
 
     public void GenerateCards()
     {
-        
+        ColorLoto_1_3_Controller.FillWithColors(cards, colors, 1);
         for (int i = 0; i < cards.Length; i++)
-        { 
-            cards[i].colorImages[0].sprite=colors[i];
+        {
             Global.RandomizePositionAndRotation(ref cards[i].rectTransform, cardsPoints[i], maxRandomDistance, maxRandomRotation);
             SimpleCard temp = cards[i].GetComponent<SimpleCard>();
-            temp.id = i;
+            temp.id = System.Array.IndexOf(Global.colors9, cards[i].currentColor);
             temp.button.onClick.AddListener(new UnityAction(() => { AllColors_1_1_Controller.Instance.OnCardPush(temp.id); }));
         }
     }

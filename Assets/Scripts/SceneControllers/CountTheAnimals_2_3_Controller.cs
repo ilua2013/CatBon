@@ -10,10 +10,8 @@ public class CountTheAnimals_2_3_Controller : BaseController<CountTheAnimals_2_3
     public float maxRandomDistance = 10f;
     public float maxRandomRotation = 20f;
     public HorizontalScroll horizontalScroll;
-    public Image Background;
-    public Sprite[] sprites;
+
     public int currentNumber = 0;
-    int t;
     public int currentLevel = 0;
     public int maxLevels = 5;
 
@@ -98,19 +96,15 @@ public class CountTheAnimals_2_3_Controller : BaseController<CountTheAnimals_2_3
 
     public void OnCardPush(int id)
     {
-        
         if (id == currentNumber)
         {
-            CatHelper.Instance.ShowText("Молодец, идем дальше.");
-           //SoundMaster.Instance.PlayTrueAnswer();
+            //CatHelper.Instance.ShowText("Верно!");
+            //SoundMaster.Instance.PlayTrueAnswer();
             NextLevel();
-
-      
         }
         else
         {
-            CatHelper.Instance.ShowText("Неверно...");
-            
+            CatHelper.Instance.ShowText("Неверно!");
             if (SoundMaster.Instance) SoundMaster.Instance.PlayWrongAnswer();
         }
     }
@@ -119,11 +113,9 @@ public class CountTheAnimals_2_3_Controller : BaseController<CountTheAnimals_2_3
     {
         currentLevel++;
         StartCoroutine(DelayedNextLevel(currentLevel >= maxLevels));
-        
-        
-        
     }
- private IEnumerator DelayedNextLevel(bool win)
+
+    private IEnumerator DelayedNextLevel(bool win)
     {
         for (int i = 0; i < horizontalScroll.availableCards.Count; i++)
         {
@@ -139,8 +131,8 @@ public class CountTheAnimals_2_3_Controller : BaseController<CountTheAnimals_2_3
         }
         else
         {
-            SoundMaster.Instance.PlayNextLevel();
-            CatHelper.Instance.ShowText("Верно");
+            if(SoundMaster.Instance) SoundMaster.Instance.PlayNextLevel();
+            CatHelper.Instance.ShowText("Молодец! Идём дальше.");
             for (int i = 0; i < horizontalScroll.availableCards.Count; i++)
             {
                 foreach (var item in horizontalScroll.availableCards[i].cards)
@@ -148,13 +140,8 @@ public class CountTheAnimals_2_3_Controller : BaseController<CountTheAnimals_2_3
                     item.GetComponent<Button>().interactable = true;
                 }
             }
-            yield return new WaitForSeconds(3.5f);
+            yield return new WaitForSeconds(3f);
             Restart();
-        }
-        t++;
-        if(t>3)
-        {
-        t=0; 
         }
     }
 
@@ -163,9 +150,7 @@ public class CountTheAnimals_2_3_Controller : BaseController<CountTheAnimals_2_3
         
         
         Generate();
-        Background.sprite=sprites[t];
         horizontalScroll.ShowCardsGroup(0);
-       
     }
 
     public void Win()

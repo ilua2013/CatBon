@@ -45,7 +45,7 @@ public class FeedTheMonster_1_6_Controller : BaseController<FeedTheMonster_1_6_C
         CatHelper.Instance.ShowDefaultText();
         rowsColors = Global.GetRandomColors(8, colorRows.Count);
         GenerateCards();
-        //GenerateField();
+        GenerateField();
         for (int i = 0; i < colorCards.Length; i++)
         {
             colorCards[i].rectTransform.SetParent(defaultCarfsParent);
@@ -68,7 +68,7 @@ public class FeedTheMonster_1_6_Controller : BaseController<FeedTheMonster_1_6_C
             item.cards[0].GetComponent<MonsterController>().StopAnimation();
         }
         GenerateCards();
-        //GenerateField();
+        GenerateField();
         for (int i = 0; i < colorCards.Length; i++)
         {
             colorCards[i].rectTransform.SetParent(defaultCarfsParent);
@@ -174,7 +174,7 @@ public class FeedTheMonster_1_6_Controller : BaseController<FeedTheMonster_1_6_C
     #region GENERATION
     public void GenerateField()
     {
-        for (int i = 0; i < 1; i++)
+        for (int i = 0; i < colorRows.Count; i++)
         {
             colorRows[i].SetColor(rowsColors[i]);
             colorRows[i].hasCard = new bool[colorRows[i].cards.Count];

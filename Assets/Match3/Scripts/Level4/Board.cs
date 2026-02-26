@@ -13,7 +13,6 @@ public enum Shift
 public class Board : MonoBehaviour
 {
     public Text scoreText;
-    public string level;
     public static Board instance;
     public Text scoresText;
     public Text newScoresText;
@@ -23,12 +22,10 @@ public class Board : MonoBehaviour
     public GameObject destrEffect;
     public bool touched;
     public Timer timerScript;
-    public int max;
-    public bool fin;
     public float maxTimer = 60;
     public float timer = 60f;
     public GameObject gameOverScreen;
-    public const int n = 9;          //размер матрицы по иксу, можно изменять до любого нужного размера. В случае больших величин придется выставить более высокое значение size для главной камеры.
+    const int n = 9;          //размер матрицы по иксу, можно изменять до любого нужного размера. В случае больших величин придется выставить более высокое значение size для главной камеры.
     const int m = 7;           //аналогично для игрека
     const float offsetX = -4.5f;
     const float offsetY = 1.2f;
@@ -39,7 +36,7 @@ public class Board : MonoBehaviour
     bool _canMove = false;
     public static bool moving = false;
     Transform _tr;
-    public int lenght;
+
 
     public AudioClip[] startAudio;
     public string rulesText;
@@ -65,13 +62,12 @@ public class Board : MonoBehaviour
         //StaticParameters.match3Score = 0;
         GameObject temp;
         moving = false;
-        symbols.Shuffle();
         //заполняем игровую "доску" и массив
         for (int x = 0; x < n; x++)
         {
             for (int y = 0; y < m; y++)
             {
-                temp = Instantiate(symbols[Random.Range(0, lenght)], new Vector2(-(n - 1) * 0.6f + 1.2f * x, -(m - 1) * 0.6f + 1.2f * y), Quaternion.identity, _tr);
+                temp = Instantiate(symbols[Random.Range(0, symbols.Length)], new Vector2(-(n - 1) * 0.6f + 1.2f * x, -(m - 1) * 0.6f + 1.2f * y), Quaternion.identity, _tr);
                 _board[x, y] = temp.GetComponent<Symbol>();
                 _board[x, y].cellPosition = new Vector2Int(x, y);
             }
@@ -158,7 +154,7 @@ public class Board : MonoBehaviour
                 for (int i = 0; i < lineParts.Count; i++)
                 {
                     Destroy(_board[lineParts[i].x, lineParts[i].y].gameObject);
-                    temp = Instantiate(symbols[Random.Range(0, lenght)], new Vector2(-(n - 1) * 0.6f + 1.2f * lineParts[i].x, -(m - 1) * 0.6f + 1.2f * lineParts[i].y), Quaternion.identity, _tr);
+                    temp = Instantiate(symbols[Random.Range(0, symbols.Length)], new Vector2(-(n - 1) * 0.6f + 1.2f * lineParts[i].x, -(m - 1) * 0.6f + 1.2f * lineParts[i].y), Quaternion.identity, _tr);
                     _board[lineParts[i].x, lineParts[i].y] = temp.GetComponent<Symbol>();
                     _board[lineParts[i].x, lineParts[i].y].cellPosition = lineParts[i];
                 }
@@ -393,24 +389,6 @@ public class Board : MonoBehaviour
                     case 3:
                         destroPoints += 1;
                         break;
-                    case 4:
-                        destroPoints += 1;
-                        break;
-                    case 5:
-                        destroPoints += 1;
-                        break;
-                    case 6:
-                        destroPoints += 1;
-                        break;
-                    case 7:
-                        destroPoints += 1;
-                        break;
-                    case 8:
-                        destroPoints += 1;
-                        break;
-                    case 9:
-                        destroPoints += 1;
-                        break;
 
                 }
 
@@ -428,23 +406,11 @@ public class Board : MonoBehaviour
             scoreText.text = scores.ToString();
             newScoresText.color = new Color32(253, 196, 101, 255);
             //scoresText.text = StaticParameters.match3Score.ToString();
-            if (scores >=max && !_catHasBeenSpoken)
+            if (scores >= 300 && !_catHasBeenSpoken)
             {
                 _catHasBeenSpoken = true;
-           
-                if(fin)
-                {
-                CatHelper.Instance.ShowText("Молодец! У тебя всё получилось. Попробуй другую игру!", 6f);
-               SoundMaster.Instance.PlayWin();
-                }
-                else
-                {    
-                //destrEffect.SetActive(true);
-                CatHelper.Instance.ShowText("Молодец!Идем дальше", 6f);
-                SoundMaster.Instance.PlayNextLevel();
-                Invoke("LoadedLvel",6f);
-            
-                }
+                if (SoundMaster.Instance) SoundMaster.Instance.PlayWin();
+                CatHelper.Instance.ShowText("Молодец! У тебя всё получилось. Попробуй другую игру.", 6f);
             }
             if (stopPoints == 0)
             {
@@ -490,7 +456,7 @@ public class Board : MonoBehaviour
             dropCellsOnTheLine = dropCells;
             while (dropCells > 0)
             {
-                temp = Instantiate(symbols[Random.Range(0, lenght)], new Vector2(-(n - 1) * 0.6f + 1.2f * x, -(m - 1) * 0.6f + 1.2f * (m + dropCellsOnTheLine - dropCells)), Quaternion.identity, _tr);
+                temp = Instantiate(symbols[Random.Range(0, symbols.Length)], new Vector2(-(n - 1) * 0.6f + 1.2f * x, -(m - 1) * 0.6f + 1.2f * (m + dropCellsOnTheLine - dropCells)), Quaternion.identity, _tr);
                 _board[x, m - dropCells] = temp.GetComponent<Symbol>();
                 _board[x, m - dropCells].cellPosition = new Vector2Int(x, m - dropCells);
                 _board[x, m - dropCells].ChangePosition(new Vector2Int(0, -dropCellsOnTheLine));
@@ -504,15 +470,7 @@ public class Board : MonoBehaviour
         IfLines(true);
         IfTurns(true);
     }
-public void LoadedLvel()
-{
-Application.LoadLevel(level);
-}
-public void LoadedM()
-{
-Application.LoadLevel("MainMenu");
-}
- 
+
     Vector2Int cellPosition;
     public bool Change(Symbol symbol, Vector2Int v)
     {
@@ -598,7 +556,6 @@ Application.LoadLevel("MainMenu");
 
     public void Exit()
     {
-        print($"LoadMenu {gameObject.name}. 2");
         SceneManager.LoadScene("MainMenu");
     }
 }

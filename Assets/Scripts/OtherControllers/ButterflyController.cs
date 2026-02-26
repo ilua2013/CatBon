@@ -33,8 +33,8 @@ public class ButterflyController : MonoBehaviour
     void Start()
     {
         body.rectTransform.localScale = Vector3.zero;
-        movingSpeed += Random.Range(movingSpeed * randomFactor, movingSpeed * randomFactor);
-        animationDuration += Random.Range(-animationDuration * randomFactor/10, animationDuration * randomFactor/10);
+        movingSpeed += Random.Range(-movingSpeed * randomFactor, movingSpeed * randomFactor);
+        animationDuration += Random.Range(-animationDuration * randomFactor, animationDuration * randomFactor);
         body.sprite = animationSprites[0];
         GenerateNextPoint();
         if (autoShow) Show();

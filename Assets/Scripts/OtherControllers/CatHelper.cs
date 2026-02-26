@@ -2,11 +2,10 @@
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class CatHelper : Singleton<CatHelper>
 {
-    public TMP_Text text;
+    public Text text;
     public AudioSource audioSource;
     public float animationDuaration = 0.5f;
     public CanvasGroup[] clouds;
@@ -20,10 +19,7 @@ public class CatHelper : Singleton<CatHelper>
     {
         ShowText(defaultText, 3f);
     }
- public void ShowTextT(string defaultText )
-    {
-        ShowText(defaultText, 3f);
-    }
+
     public void PlayDefaultAudio()
     {
         if (defaultAudio) audioSource.PlayOneShot(defaultAudio);
@@ -31,9 +27,7 @@ public class CatHelper : Singleton<CatHelper>
 
     public void ShowText(string text, float hideAfter = 3)
     {
-        if (!string.IsNullOrEmpty(text)) 
-            this.text.text = text;
-
+        if (!string.IsNullOrEmpty(text)) this.text.text = text;
         if (showTextRoutine != null) StopCoroutine(showTextRoutine);
         showTextRoutine = _ShowText(text, animationDuaration, hideAfter);
         StartCoroutine(showTextRoutine);

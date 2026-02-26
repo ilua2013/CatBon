@@ -5,23 +5,17 @@ using UnityEngine.UI;
 public class MakeUpTheDoll_6_1_Controller : BaseController<MakeUpTheDoll_6_1_Controller>
 {
     public GameObject[] dollVariants;
-    public int stage = 2;
+    public int stage = 0;
 
-    public DreeRandom  DreeRandom ;
+
     [Header("Parts")]
     public Image doll;
-    public bool dool2;
     public Image mud;
     public Image blush;
     public Image lips;
-    public Image lips2;
     public Image eyelash;
-    public Image eyelashbig;
-    public GameObject S_G,M_G,L_G,Drees,Face,lp,el;
     [Header("Cosmetics")]
     public DragNDropCard cottonpad;
-    public float lipstickProgressDuration = 3f; // Длительность изменения прозрачности
-    private float lipstickProgressStartTime; // Время начала изменения прозрачности
     public DragNDropCard lipstick;
     public DragNDropCard mascara;
     public DragNDropCard sponge;
@@ -52,55 +46,36 @@ public class MakeUpTheDoll_6_1_Controller : BaseController<MakeUpTheDoll_6_1_Con
     public FloatingAlpha lipstickHighlighter;
     public FloatingAlpha mascaraHighlighter;
     public FloatingAlpha spongeHighlighter;
-    Color c; 
+
     public int maxLevels = 3;
     private int _currLevel = 0;
 
 
-
-
-    
-
-  public void Choise(DragNDropCard sponges)
-  {
-      sponge= sponges;
-      sponge.onDrag += OnDrag;
-  }
-  public void Choise_mascara(DragNDropCard mascaras)
-  {
-    mascara= mascaras;
-      mascara.onDrag += OnDrag;
-  }
-    public void Choise_lipstick(DragNDropCard lipsticks)
-  {
-    lipstick= lipsticks;
-      lipstick.onDrag += OnDrag;
-  }
     public override void Restart()
     {
         RandomizeDoll();
 
-        //faceCleaningProgress = 0;
-        //olor c = mud.color;
-        //c.a = Mathf.Lerp(1f, 0f, faceCleaningProgress);
-        //mud.color = c;
+        faceCleaningProgress = 0;
+        Color c = mud.color;
+        c.a = Mathf.Lerp(1f, 0f, faceCleaningProgress);
+        mud.color = c;
 
-        eyelashesProgress = 0f;
+        eyelashesProgress = 0.25f;
         c = eyelash.color;
-        c.a = 0.1f;
+        c.a = Mathf.Lerp(0f, 1f, eyelashesProgress);
         eyelash.color = c;
 
         creamProgress = 0;
         c = blush.color;
-        c.a=0.1f;
+        c.a = Mathf.Lerp(1f, 0f, creamProgress);
         blush.color = c;
 
         lipstickProgress = 0;
         c = lips.color;
-        c.a = Mathf.Lerp(0.01f, 1f, lipstickProgress);
+        c.a = Mathf.Lerp(0f, 1f, lipstickProgress);
         lips.color = c;
 
-        stage = 2;
+        stage = 0;
         if(_currLevel == 0)
         {
 
@@ -113,23 +88,20 @@ public class MakeUpTheDoll_6_1_Controller : BaseController<MakeUpTheDoll_6_1_Con
     }
     private void Start()
     {
-        if(dool2==true)
-        {
-        //CatHelper.Instance.Stop();
-        //if (SoundMaster.Instance) SoundMaster.Instance.Stop();
+        CatHelper.Instance.Stop();
+        if (SoundMaster.Instance) SoundMaster.Instance.Stop();
         CatHelper.Instance.defaultText = startRulesText;
         CatHelper.Instance.ShowText(startRulesText);
-        ///CatHelper.Instance.defaultAudio = startAudio.Random();
-        //CatHelper.Instance.audioSource.clip = startAudio.Random();
-        //CatHelper.Instance.audioSource.Play();
+        CatHelper.Instance.defaultAudio = startAudio.Random();
+        CatHelper.Instance.audioSource.clip = startAudio.Random();
+        CatHelper.Instance.audioSource.Play();
         
         cottonpad.onDrag += OnDrag;
-        //lipstick.onDrag += OnDrag;
-       
-      
+        lipstick.onDrag += OnDrag;
+        mascara.onDrag += OnDrag;
+        sponge.onDrag += OnDrag;
         dollVariants.Shuffle();
         Restart();
-        }
     }
 
 
@@ -138,28 +110,28 @@ public class MakeUpTheDoll_6_1_Controller : BaseController<MakeUpTheDoll_6_1_Con
         yield return new WaitForSeconds(startRulesDelay);
 
         CatHelper.Instance.ShowText(faceCleaningText);
-         ///stage = 2;
+        stage = 1;
         cottonpadHighlighter.StartFloating(0f);
         while (faceCleaningProgress < 1f) yield return null;
         DragAndDropManager.Instance.lastCard.StopDrag();
         cottonpadHighlighter.StopFloating();
 
         CatHelper.Instance.ShowText(creamText);
-        ///stage = 2;
+        stage = 2;
         spongeHighlighter.StartFloating(0f);
-        while (creamProgress < 0.6f) yield return null;
+        while (creamProgress < 1f) yield return null;
         DragAndDropManager.Instance.lastCard.StopDrag();
         spongeHighlighter.StopFloating();
 
         CatHelper.Instance.ShowText(eyelashesText);
-       /// stage = 3;
+        stage = 3;
         mascaraHighlighter.StartFloating(0f);
         while (eyelashesProgress < 1f) yield return null;
         DragAndDropManager.Instance.lastCard.StopDrag();
         mascaraHighlighter.StopFloating();
 
         CatHelper.Instance.ShowText(lipstickText);
-        ///stage = 4;
+        stage = 4;
         lipstickHighlighter.StartFloating(0f);
         while (lipstickProgress < 1f) yield return null;
         DragAndDropManager.Instance.lastCard.StopDrag();
@@ -182,12 +154,47 @@ public class MakeUpTheDoll_6_1_Controller : BaseController<MakeUpTheDoll_6_1_Con
             if (stage != 0) CatHelper.Instance.ShowText(wrongItemText, 3f);
             card.StopDrag();
         }
-      
+        else
+        {
+            switch (stage)
+            {
+                case 1:
+                    cottonpadHighlighter.StopFloating();
+                    break;
+                case 2:
+                    spongeHighlighter.StopFloating();
+                    break;
+                case 3:
+                    mascaraHighlighter.StopFloating();
+                    break;
+                case 4:
+                    lipstickHighlighter.StopFloating();
+                    break;
+                default:
+                    break;
+            }
+        }
     }
     public void OnDragStop(DragNDropCard card)
     {
         card.GoToDefaultPosition();
-        
+        switch (stage)
+        {
+            case 1:
+                cottonpadHighlighter.StartFloating(0f);
+                break;
+            case 2:
+                spongeHighlighter.StartFloating(0f);
+                break;
+            case 3:
+                mascaraHighlighter.StartFloating(0f);
+                break;
+            case 4:
+                lipstickHighlighter.StartFloating(0f);
+                break;
+            default:
+                break;
+        }
     }
 
     public void OnDrag(Vector2 delta)
@@ -209,28 +216,21 @@ public class MakeUpTheDoll_6_1_Controller : BaseController<MakeUpTheDoll_6_1_Con
         }
         else if (stage == 3)
         {
-            if (eyelashbig.rectTransform.ContainsPointScalable(mascara.pointer.position))
+            if (eyelash.rectTransform.ContainsPointScalable(mascara.pointer.position))
             {
                 AddEyelashesProgress();
-               
             }
         }
         else
         {
-            if (lips2.rectTransform.ContainsPointScalable(lipstick.pointer.position))
+            if (lips.rectTransform.ContainsPointScalable(lipstick.pointer.position))
             {
                 AddLipstickProgress();
             }
         }
     }
 
-void FixedUpate()
-{
-   if (lips2.rectTransform.ContainsPointScalable(lipstick.pointer.position))
-            {
-                AddLipstickProgress();
-            } 
-}
+
     public void RandomizeDoll()
     {
         foreach (var item in dollVariants)
@@ -252,74 +252,23 @@ void FixedUpate()
     {
         eyelashesProgress = Mathf.Clamp(eyelashesProgress + eyelashesProgressSpeed, 0f, 1f);
         Color c = eyelash.color;
-        c.a = Mathf.Lerp(0.1f, 1f, eyelashesProgress);
+        c.a = Mathf.Lerp(0f, 1f, eyelashesProgress);
         eyelash.color = c;
-
-          if(eyelashesProgress>0.95f)
-          {
-            stage=4;
-            L_G.SetActive(true);
-            M_G.SetActive(false);
-          }
     }
     public void AddCreamProgress()
     {
-        creamProgress = Mathf.Clamp(creamProgress + creamProgressSpeed/2, 0f, 1f);
+        creamProgress = Mathf.Clamp(creamProgress + creamProgressSpeed, 0f, 1f);
         Color c = blush.color;
-        c.a = Mathf.Lerp(0.1f, 1f, creamProgress);
+        c.a = Mathf.Lerp(1f, 0f, creamProgress);
         blush.color = c;
-        
-        if(creamProgress>0.85f)
-        {
-            stage=3;
-             el.SetActive(true);
-            S_G.SetActive(false);
-            M_G.SetActive(true);
-        }
-    }
-    public void Reset()
-    {
-     
-        Color c = lips.color;  
-        c.a = 0;
-        lips.color = c;
-        lipstickProgress=0;
     }
     public void AddLipstickProgress()
     {
-    if (lips2.rectTransform.ContainsPointScalable(lipstick.pointer.position))
-    {
-    if (lipstickProgressStartTime == 0f)
-    {
-        // Начало изменения прозрачности
-        lipstickProgressStartTime = Time.time;
+        lipstickProgress = Mathf.Clamp(lipstickProgress + lipstickProgressSpeed, 0f, 1f);
+        Color c = lips.color;
+        c.a = Mathf.Lerp(0f, 1f, lipstickProgress);
+        lips.color = c;
     }
-
-    // Прошедшее время с начала изменения прозрачности
-   float elapsedTime = Time.fixedTime - lipstickProgressStartTime;
-
-    // Вычисляем прогресс изменения прозрачности в диапазоне от 0 до 1
-    float progress = Mathf.Clamp01(elapsedTime / lipstickProgressDuration);
-     lipstickProgress=progress;
-    // Вычисляем прозрачность с помощью линейной интерполяции
-    Color c = lips.color;
-    c.a = Mathf.Lerp(0.1f, 1f, progress);
-    lips.color = c;
-}
-else
-{
-    // Прямоугольники не пересекаются, прекращаем изменение прозрачности
-    lipstickProgressStartTime = 0f;
-}
-Debug.Log(lipstickProgress+"d");
-if (lipstickProgress > 0.95f)
-{
-    Drees.SetActive(true);
-    Face.SetActive(false);
-    lp.SetActive(true);
-    DreeRandom.Next();
-}
-}
 
 
     private void Win()
@@ -328,7 +277,7 @@ if (lipstickProgress > 0.95f)
         SoundMaster.Instance.PlayWin();
         StartCoroutine(AutoExit(5.5f));
     }
-     public  void NextLevel()
+    private void NextLevel()
     {
         _currLevel++;
         if (_currLevel == maxLevels)
@@ -342,7 +291,6 @@ if (lipstickProgress > 0.95f)
             StartCoroutine(DelayedRestart());
         }
     }
-    
     private IEnumerator DelayedRestart()
     {
         if (SoundMaster.Instance) SoundMaster.Instance.PlayNextLevel();
