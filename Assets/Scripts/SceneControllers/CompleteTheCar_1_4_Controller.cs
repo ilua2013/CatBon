@@ -15,9 +15,7 @@ public class CompleteTheCar_1_4_Controller : BaseController<CompleteTheCar_1_4_C
 
     [Header("Parts IDs")]
     public int doorId;
-    public int t;
     public int wheelsId;
-    public bool fin;
     public int windowsId;
     public int frontLightId;
     public int backLightId;
@@ -31,7 +29,6 @@ public class CompleteTheCar_1_4_Controller : BaseController<CompleteTheCar_1_4_C
     public RectTransform doorsPoint;
     public RectTransform windowsArea;
     public RectTransform windowsPoint;
-    public RectTransform[] windowsPoints;
     public RectTransform wheelsArea;
     public RectTransform[] wheelsPoints;
     public RectTransform frontLightArea;
@@ -46,9 +43,7 @@ public class CompleteTheCar_1_4_Controller : BaseController<CompleteTheCar_1_4_C
     public bool hasWheels = false;
     public bool hasFrontLight = false;
     public bool hasBackLight = false;
-    public bool w_3;
-    public bool w_4;
-    public bool t_1;
+
     public Color[] colors;
     private Color mainColor;
     private int currentLevel = 0;
@@ -56,12 +51,10 @@ public class CompleteTheCar_1_4_Controller : BaseController<CompleteTheCar_1_4_C
     [Header("Cat phrases")]
     public string rulesText;
     public string trueColorText;
-    public string level;
     public string wrongColorText;
     public string wrongPartText;
     public string needTheDoorsFirstText;
     public string winText;
-    public int win_max;
     public string nextLevelText;
     
     [Header("Audio")]
@@ -71,7 +64,7 @@ public class CompleteTheCar_1_4_Controller : BaseController<CompleteTheCar_1_4_C
     public AudioClip[] wheelsAudio;
     public AudioClip[] headlightAudio;
     public AudioClip[] taillightAudio;
-    public bool start;
+
     public float speed = 10f;
 
     #region EVENTS
@@ -117,13 +110,10 @@ public class CompleteTheCar_1_4_Controller : BaseController<CompleteTheCar_1_4_C
         cam.transform.position = camPos;
         cam.orthographicSize = Screen.height / 2f;
         DragAndDropManager.Instance.onDragStart.AddListener(OnStartDragging);
-        if(start)
-        {
         CatHelper.Instance.defaultText = rulesText;
         CatHelper.Instance.ShowText(rulesText);
         CatHelper.Instance.defaultAudio = startAudio.Random();
         CatHelper.Instance.PlayDefaultAudio();
-        }
         GenerateColors();
         Restart();
     }
@@ -148,29 +138,15 @@ public class CompleteTheCar_1_4_Controller : BaseController<CompleteTheCar_1_4_C
         CatHelper.Instance.ShowText(nextLevelText);
         
         currentLevel++;
-        if (currentLevel == win_max)
+        if (currentLevel > colors.Length - 1)
         {
-            if(fin==true)
-            {
             Win();
-            }
-            else
-            {
-                StartCoroutine(_NextLevels());
-            }
         }
         else
         {
-            SoundMaster.Instance.PlayNextLevel();
+            if (SoundMaster.Instance) SoundMaster.Instance.PlayNextLevel();
             StartCoroutine(_NextLevel());
         }
-    }
-    private IEnumerator _NextLevels()
-    {    
-        SoundMaster.Instance.PlayNextLevel();
-           yield return new WaitForSeconds(3f);
-   
-           Application.LoadLevel(level);
     }
     public void Win() // все машины собраны, конец игры
     {
@@ -188,7 +164,7 @@ public class CompleteTheCar_1_4_Controller : BaseController<CompleteTheCar_1_4_C
 
     private IEnumerator _NextLevel()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         while (currentCar.localPosition != Vector3.down * 2000)
         {
             currentCar.localPosition = Vector3.MoveTowards(currentCar.localPosition, Vector3.down * 2000, speed * Time.deltaTime);
@@ -212,9 +188,7 @@ public class CompleteTheCar_1_4_Controller : BaseController<CompleteTheCar_1_4_C
 
     private void GenerateColors() // генерация 9 рандомно расположенных цветов
     {
-       
-            colors = Global.GetRandomColorsCar(10, 10).ToArray();
-        
+        colors = Global.GetRandomColors(9, 9).ToArray();
     }
     private void ResetCar() //сброс собранной машины
     {
@@ -232,30 +206,12 @@ public class CompleteTheCar_1_4_Controller : BaseController<CompleteTheCar_1_4_C
     private void SelectCarBody() //выбор кузова машины и всех ее частей
     {
         if (currentCar) currentCar.gameObject.SetActive(false);
-        currentCar = cars[t];
-        t++;
+        currentCar = cars.Random();
         carBody = currentCar.Find("Body").GetComponent<Image>();
         doorsArea = currentCar.Find("Doors") as RectTransform;
         doorsPoint = doorsArea.GetChild(0) as RectTransform;
         wheelsArea = currentCar.Find("Wheels") as RectTransform;
-        if(w_3==true)
-        {
-        wheelsPoints = new RectTransform[] { wheelsArea.GetChild(0) as RectTransform, wheelsArea.GetChild(1) as RectTransform,wheelsArea.GetChild(2) as RectTransform };
-        }
-        else
-        {
-         wheelsPoints = new RectTransform[] { wheelsArea.GetChild(0) as RectTransform, wheelsArea.GetChild(1) as RectTransform };
-        }
-        if(w_4==true)
-        {
-        windowsArea = currentCar.Find("Windows") as RectTransform;
-         windowsPoints = new RectTransform[] { windowsArea.GetChild(0) as RectTransform, windowsArea.GetChild(1) as RectTransform,windowsArea.GetChild(2) as RectTransform,windowsArea.GetChild(3) as RectTransform };
-        }
-        else
-        {
-            windowsArea = currentCar.Find("Windows") as RectTransform;
-            windowsPoint = windowsArea.GetChild(0) as RectTransform;
-        }
+        wheelsPoints = new RectTransform[] { wheelsArea.GetChild(0) as RectTransform, wheelsArea.GetChild(1) as RectTransform };
         frontLightArea = currentCar.Find("FrontLight") as RectTransform;
         frontLightPoint = frontLightArea.GetChild(0) as RectTransform;
         backLightsArea = currentCar.Find("BackLight") as RectTransform;
@@ -315,37 +271,11 @@ public class CompleteTheCar_1_4_Controller : BaseController<CompleteTheCar_1_4_C
                     {
                         if (card.currentColor == mainColor) // правильный цвет
                         {
-
-                            CatHelper.Instance.ShowText(trueColorText, 0.6f);
+                            CatHelper.Instance.ShowText(trueColorText, 3f);
                             card.id4 = dragNDropCard.id4 = 9;
-                        if(w_4==true)
-                        {
-                        dragNDropCard.GoToPosition(new Vector2(10000,10000), () => { dragNDropCard.SetScale(windowsPoints[0].localScale/2); }, goToPointDuration);
-                        DragNDropCard temp0 = Instantiate(dragNDropCard.gameObject).GetComponent<DragNDropCard>();
-                        temp0.rectTransform.SetParent(windowsArea);
-                        temp0.rectTransform.position = windowsPoints[0].position;
-                        temp0.SetScale(windowsPoints[0].localScale/2);
-                        DragNDropCard temp = Instantiate(dragNDropCard.gameObject).GetComponent<DragNDropCard>();
-                        temp.rectTransform.SetParent(windowsArea);
-                        temp.rectTransform.position = windowsPoints[1].position;
-                        temp.SetScale(windowsPoints[1].localScale/2);
-                        
-                        DragNDropCard temp2 = Instantiate(dragNDropCard.gameObject).GetComponent<DragNDropCard>();
-                        temp2.rectTransform.SetParent(windowsArea);
-                        temp2.rectTransform.position = windowsPoints[2].position;
-                        temp2.SetScale(windowsPoints[2].localScale/2); 
-                         DragNDropCard temp3 = Instantiate(dragNDropCard.gameObject).GetComponent<DragNDropCard>();
-                        temp3.rectTransform.SetParent(windowsArea);
-                        temp3.rectTransform.position = windowsPoints[3].position;
-                        temp3.SetScale(windowsPoints[3].localScale/2); 
-                        }
-                            else
-                             {
-                             dragNDropCard.rectTransform.SetParent(windowsArea);
-                             dragNDropCard.GoToPosition(windowsPoint.position, () => { dragNDropCard.SetScale(windowsPoint.localScale); }, goToPointDuration);
-                             }
+                            dragNDropCard.rectTransform.SetParent(windowsArea);
+                            dragNDropCard.GoToPosition(windowsPoint.position, () => { dragNDropCard.SetScale(windowsPoint.localScale); }, goToPointDuration);
                             dragNDropCard.draggable = false;
-                            
                             hasWindows = true;
                             result = windowsPoint;
                             NextPartsPack();
@@ -353,7 +283,7 @@ public class CompleteTheCar_1_4_Controller : BaseController<CompleteTheCar_1_4_C
                         }
                         else // неправильный цвет
                         {
-                            CatHelper.Instance.ShowText(wrongColorText, 0.4f);
+                            CatHelper.Instance.ShowText(wrongColorText, 3f);
                             dragNDropCard.GoToDefaultPosition();
                             if (SoundMaster.Instance) SoundMaster.Instance.PlayWrongAnswer();
                         }
@@ -369,7 +299,7 @@ public class CompleteTheCar_1_4_Controller : BaseController<CompleteTheCar_1_4_C
                 {
                     if (card.currentColor == mainColor) // правильный цвет
                     {
-                        CatHelper.Instance.ShowText(trueColorText, 0.6f);
+                        CatHelper.Instance.ShowText(trueColorText, 3f);
                         card.id4 = dragNDropCard.id4 = 9;
                         dragNDropCard.rectTransform.SetParent(doorsArea);
                         dragNDropCard.GoToPosition(doorsPoint.position, () => { dragNDropCard.SetScale(doorsPoint.localScale); }, goToPointDuration);
@@ -381,7 +311,7 @@ public class CompleteTheCar_1_4_Controller : BaseController<CompleteTheCar_1_4_C
                     }
                     else // неправильный цвет
                     {
-                        CatHelper.Instance.ShowText(wrongColorText, 0.4f);
+                        CatHelper.Instance.ShowText(wrongColorText, 3f);
                         dragNDropCard.GoToDefaultPosition();
                         if (SoundMaster.Instance) SoundMaster.Instance.PlayWrongAnswer();
                     }
@@ -390,28 +320,14 @@ public class CompleteTheCar_1_4_Controller : BaseController<CompleteTheCar_1_4_C
                 {
                     if (card.currentColor == mainColor) // правильный цвет
                     {
-                        CatHelper.Instance.ShowText(trueColorText, 0.6f);
+                        CatHelper.Instance.ShowText(trueColorText, 3f);
                         card.id4 = dragNDropCard.id4 = 9;
                         dragNDropCard.rectTransform.SetParent(wheelsArea);
                         dragNDropCard.GoToPosition(wheelsPoints[0].position, () => { dragNDropCard.SetScale(wheelsPoints[0].localScale); }, goToPointDuration);
                         DragNDropCard temp = Instantiate(dragNDropCard.gameObject).GetComponent<DragNDropCard>();
                         temp.rectTransform.SetParent(wheelsArea);
                         temp.rectTransform.position = wheelsPoints[1].position;
-                        if(t_1)
-                        {
-                        temp.SetScale(wheelsPoints[1].localScale*1.3f);
-                        }
-                        else
-                        {
                         temp.SetScale(wheelsPoints[1].localScale);
-                        }
-                        if(w_3==true)
-                        {
-                        DragNDropCard temp2 = Instantiate(dragNDropCard.gameObject).GetComponent<DragNDropCard>();
-                        temp2.rectTransform.SetParent(wheelsArea);
-                        temp2.rectTransform.position = wheelsPoints[2].position;
-                        temp2.SetScale(wheelsPoints[2].localScale); 
-                        }
                         temp.draggable = false;
                         hasWheels = true;
                         result = wheelsPoints[0];
@@ -421,7 +337,7 @@ public class CompleteTheCar_1_4_Controller : BaseController<CompleteTheCar_1_4_C
                     }
                     else // неправильный цвет
                     {
-                        CatHelper.Instance.ShowText(wrongColorText, 0.4f);
+                        CatHelper.Instance.ShowText(wrongColorText, 3f);
                         dragNDropCard.GoToDefaultPosition();
                         if (SoundMaster.Instance) SoundMaster.Instance.PlayWrongAnswer();
                     }
@@ -430,7 +346,7 @@ public class CompleteTheCar_1_4_Controller : BaseController<CompleteTheCar_1_4_C
                 {
                     if (card.currentColor == mainColor) // правильный цвет
                     {
-                        CatHelper.Instance.ShowText(trueColorText, 0.6f);
+                        CatHelper.Instance.ShowText(trueColorText, 3f);
                         card.id4 = dragNDropCard.id4 = 9;
                         dragNDropCard.rectTransform.SetParent(backLightsArea);
                         dragNDropCard.GoToPosition(backLightsPoint.position, () => { dragNDropCard.SetScale(backLightsPoint.localScale); }, goToPointDuration);
@@ -442,7 +358,7 @@ public class CompleteTheCar_1_4_Controller : BaseController<CompleteTheCar_1_4_C
                     }
                     else // неправильный цвет
                     {
-                        CatHelper.Instance.ShowText(wrongColorText, 0.4f);
+                        CatHelper.Instance.ShowText(wrongColorText, 3f);
                         dragNDropCard.GoToDefaultPosition();
                         if (SoundMaster.Instance) SoundMaster.Instance.PlayWrongAnswer();
                     }
@@ -451,7 +367,7 @@ public class CompleteTheCar_1_4_Controller : BaseController<CompleteTheCar_1_4_C
                 {
                     if (card.currentColor == mainColor) // правильный цвет
                     {
-                        CatHelper.Instance.ShowText(trueColorText, 0.6f);
+                        CatHelper.Instance.ShowText(trueColorText, 3f);
                         card.id4 = dragNDropCard.id4 = 9;
                         dragNDropCard.rectTransform.SetParent(frontLightArea);
                         dragNDropCard.GoToPosition(frontLightPoint.position, () => { dragNDropCard.SetScale(frontLightPoint.localScale); }, goToPointDuration);
@@ -463,7 +379,7 @@ public class CompleteTheCar_1_4_Controller : BaseController<CompleteTheCar_1_4_C
                     }
                     else // неправильный цвет
                     {
-                        CatHelper.Instance.ShowText(wrongColorText, 0.6f);
+                        CatHelper.Instance.ShowText(wrongColorText, 3f);
                         dragNDropCard.GoToDefaultPosition();
                         if (SoundMaster.Instance) SoundMaster.Instance.PlayWrongAnswer();
                     }

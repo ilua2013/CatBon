@@ -22,7 +22,6 @@ public class GuessTheAnimal_3_1_Controller : BaseController<GuessTheAnimal_3_1_C
     public string winText;
     public string nextLevelText;
     public string wrongText;
-    bool NotZumed;
 
     [Header("Audio")]
     public AudioClip[] startAudio;
@@ -78,7 +77,6 @@ public class GuessTheAnimal_3_1_Controller : BaseController<GuessTheAnimal_3_1_C
         if (_stage == 3)// скрываем меню, показываем животное
         {
             horizontalScrollAnimator.SetTrigger("out");
-            NotZumed=true;
             CatHelper.Instance.audioSource.clip = trueAnimalSound.Random();
             CatHelper.Instance.audioSource.Play();
             CatHelper.Instance.PlayAudio(availableAnimals[_currentAnimal].phrases, 2f);
@@ -171,7 +169,6 @@ public class GuessTheAnimal_3_1_Controller : BaseController<GuessTheAnimal_3_1_C
         _currentAnimal++;
         _preStartDelay = 3f;
         _stage = 1;
-        NotZumed=false;
         StartCoroutine(Controller());
     }
     void Win()
@@ -185,15 +182,12 @@ public class GuessTheAnimal_3_1_Controller : BaseController<GuessTheAnimal_3_1_C
         
     }
 
-    public void PlayCurrentAnimal()
+    void PlayCurrentAnimal()
     {
-        if(NotZumed==false)
-        {
         farmController.SetImage(availableAnimals[_currentAnimal].sprite);
         AudioClip currAnimalSound = availableAnimals[_currentAnimal].audios.Random();
         CatHelper.Instance.PlayAudio(currAnimalSound);
         farmShaker.Play(currAnimalSound.length);
-        }
     }
 
     void SetButtonsInteractive(bool state)

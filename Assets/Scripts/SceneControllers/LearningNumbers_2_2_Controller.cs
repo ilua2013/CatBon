@@ -98,7 +98,7 @@ public class LearningNumbers_2_2_Controller : BaseController<LearningNumbers_2_2
                 {
                     card.GoToDefaultPosition();
                     SoundMaster.Instance.PlayWrongAnswer();
-                    CatHelper.Instance.ShowText("Неверно...", 2f);
+                    CatHelper.Instance.ShowText("Неверно.", 2f);
                 }
                 return;
             }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Events;
 
 [System.Serializable]
@@ -27,7 +26,6 @@ public class ColorLoto_1_3_Controller : BaseController<ColorLoto_1_3_Controller>
     public float maxRandomDistance = 10f;
     public float maxRandomRotation = 20f;
     public ColorLotoFrameController frameController;
-    public Image[] r1,r2,r3;
 
     public List<Color> rowsColors;
 
@@ -53,58 +51,21 @@ public class ColorLoto_1_3_Controller : BaseController<ColorLoto_1_3_Controller>
 
     public int maxLevels = 3;
     private int _currLevel = 0;
-    int R;
-public bool start;
+
+
     #region GAME
-    void Awake()
-    {
-        animals.Shuffle();
-        R=UnityEngine.Random.Range(3,6);
-  
-    for (int i = 0; i < 4; i++)
-    {
-    r1[i].sprite=animals[R];
-    }
-    for (int i = 0; i < 4; i++)
-    {
-    r2[i].sprite=animals[1+R];
-    }
-      for (int i = 0; i < 4; i++)
-    {
-    r3[i].sprite=animals[2+R];
-    }
-    }
     private void Start()
     {
-        
         DragAndDropManager.Instance.onDragStop.AddListener(OnCardDrop);
         DragAndDropManager.Instance.onDragStart.AddListener(OnStartDrag);
         Restart();
-      
-        {
         CatHelper.Instance.defaultText = rulesText;
         CatHelper.Instance.defaultAudio = startAudio.Random();
-}
-        Debug.Log(R);
+        
     }
     public override void Restart()
     {
-        rowsColors = Global.GetRandomColors(4, 11);
-         animals.Shuffle();
-        R=UnityEngine.Random.Range(3,6);
-  
-    for (int i = 0; i < 4; i++)
-    {
-    r1[i].sprite=animals[R];
-    }
-    for (int i = 0; i < 4; i++)
-    {
-    r2[i].sprite=animals[1+R];
-    }
-      for (int i = 0; i < 4; i++)
-    {
-    r3[i].sprite=animals[2+R];
-    }
+        rowsColors = Global.GetRandomColors(4, 7);
         GenerateCards();
         GenerateField();
         if (_currLevel == 0)
@@ -142,14 +103,14 @@ public bool start;
                             }
                             else
                             {
-                               CatHelper.Instance.ShowText(trueColorText, 1f); 
+                                CatHelper.Instance.ShowText(trueColorText, 3f);
                                 if (SoundMaster.Instance) SoundMaster.Instance.PlayTrueAnswer();
                             }
                             break;
                         }
                         else
                         {
-                            CatHelper.Instance.ShowText(wrongColorText, 1f);
+                            //CatHelper.Instance.ShowText(wrongColorText, 3f);
                             falseColor = true;
                             break;
                         }
@@ -157,7 +118,7 @@ public bool start;
                     else
                     {
 
-                        ///falseEnimal = true;
+                        falseEnimal = true;
                         break;
                     }
                 }
@@ -169,13 +130,12 @@ public bool start;
 
         }
         if (goBack)
-        { CatHelper.Instance.ShowText(wrongColorText, 1f);
-SoundMaster.Instance.PlayWrongAnswer();
+        {
             card.SetAllDefault();
             //if (!falseColor && !falseEnimal) CatHelper.Instance.ShowText(falseSlotText, 3f);
             if (falseEnimal || falseColor)
             {
-                CatHelper.Instance.ShowText(falseEnimalText, 1f);
+                CatHelper.Instance.ShowText(falseEnimalText, 3f);
                 if(SoundMaster.Instance) SoundMaster.Instance.PlayWrongAnswer();
             }
 
@@ -223,7 +183,7 @@ SoundMaster.Instance.PlayWrongAnswer();
         FillWithColors(colorCards, rowsColors, 3);
         for (int i = 0; i < colorCards.Length; i++)
         {
-            Global.RandomizePositionAndRotation(ref colorCards[i].rectTransform, colorCardsStartPoint[i], maxRandomDistance, maxRandomRotation/4);
+            Global.RandomizePositionAndRotation(ref colorCards[i].rectTransform, colorCardsStartPoint[i], maxRandomDistance, maxRandomRotation);
             DragNDropCard temp = colorCards[i].GetComponent<DragNDropCard>();
             temp.Start();
             temp.draggable = true;
@@ -266,9 +226,9 @@ SoundMaster.Instance.PlayWrongAnswer();
         {
             for (int j = 0; j < c[i].Count; j++)
             {
-                c[i][j].SetColorImage(0, animals[j+R]);
+                c[i][j].SetColorImage(0, animals[j]);
                 c[i][j].id2 = j;
-                c[i][j].colorImages[0].rectTransform.sizeDelta = new Vector2(194, 163.33f) / sizeDenominator;
+                c[i][j].colorImages[0].rectTransform.sizeDelta = new Vector2(animals[j].rect.width, animals[j].rect.height) / sizeDenominator;
             }
         }
     }
@@ -290,7 +250,6 @@ SoundMaster.Instance.PlayWrongAnswer();
         }
         else
         {
-            
             if (SoundMaster.Instance) SoundMaster.Instance.PlayNextLevel();
             CatHelper.Instance.ShowText("Молодец! Идём дальше.");
             StartCoroutine(DelayedRestart());

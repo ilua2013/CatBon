@@ -47,7 +47,7 @@ public class ButterflyCatching_1_5_Controller : BaseController<ButterflyCatching
     }
     private void NextLevel()
     {
-        //StopCoroutine(repeaterRoutine);
+        StopCoroutine(repeaterRoutine);
         SetBatterflyInteractible(false);
         _currLevel++;
         if(_currLevel >= levels)
@@ -55,19 +55,19 @@ public class ButterflyCatching_1_5_Controller : BaseController<ButterflyCatching
             Win();
             return;
         }
-        CatHelper.Instance.ShowText("Молодец! Идём дальше.");
-        SoundMaster.Instance.PlayNextLevel();
+        CatHelper.Instance.ShowText("Молодец! Идем дальше.");
+        //SoundMaster.Instance.PlayNextLevel(1.3f);
         StartCoroutine(DelayedRestart());
     }
     private IEnumerator DelayedRestart()
     {
-        
-        yield return new WaitForSeconds(2f);
+        if(SoundMaster.Instance) SoundMaster.Instance.PlayNextLevel();
+        yield return new WaitForSeconds(1.5f);
         for (int i = 0; i < _butterflies.Count; i++)
         {
             _butterflies[i].Hide();
         }
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.5f);
         Restart();
         SetBatterflyInteractible(true);
         //CatHelper.Instance.ShowText(nextLevelText + $" {Global.GetColorName(mainColor)} цвет.");
@@ -82,11 +82,7 @@ public class ButterflyCatching_1_5_Controller : BaseController<ButterflyCatching
         print(colorId);
         CatHelper.Instance.ShowText(rulesText + Global.colorsNamesGenitive[colorId] + " цвета.");
         CatHelper.Instance.PlayAudio(colorSounds[colorId].audios.Random());
-        //Global.RenewCoroutine(this, ref repeaterRoutine, CatchRepeating());
-    }
-    public void plays()
-    {
-        CatHelper.Instance.PlayAudio(colorSounds[colorId].audios.Random());
+        Global.RenewCoroutine(this, ref repeaterRoutine, CatchRepeating());
     }
 
     private void GenerateMainColor()
@@ -134,10 +130,10 @@ public class ButterflyCatching_1_5_Controller : BaseController<ButterflyCatching
         }
         foreach (var item in temp)
         {
-            Color rndColor = Global.colors9.Random();
+            Color rndColor = Global.colors7.Random();
             while (rndColor == mainColor)
             {
-                rndColor = Global.colors9.Random();
+                rndColor = Global.colors7.Random();
             }
             item.SetColor(rndColor);
             item.id2 = 0;

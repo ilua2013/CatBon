@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4228569120195299743}
   - component: {fileID: 5113145991435877923}
   - component: {fileID: 381532084563208758}
-  - component: {fileID: 6784703618517006955}
   m_Layer: 0
   m_Name: Symbol0
   m_TagString: Untagged
@@ -49,8 +48,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -75,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 26554f9ffbc4ac74dbe5ecada69daed6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c013e19d52e92464f8a4048d3e2c47a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -117,7 +114,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.56, y: 4.7}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 4.3, y: 4.31}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -126,23 +123,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.3, y: 2.3}
   m_EdgeRadius: 0
---- !u!114 &6784703618517006955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4787681594309488464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f6bb3bbca8bde6438810e80a5c70c3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  img: {fileID: 4884511740563796740}
-  sprites:
-  - {fileID: 21300000, guid: 315e2de610262784fb79d99d7623ff8b, type: 3}
-  - {fileID: 21300000, guid: 5b1fcd6ba508b3f4eae26bb5c2a2218c, type: 3}
-  - {fileID: 21300000, guid: 1b6b4331a83df52449cf52604233fcd2, type: 3}
 --- !u!1 &8464041653714515583
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 8464041653714515583}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
+  m_LocalScale: {x: 2.2, y: 2.2, z: 2.2}
   m_Children: []
   m_Father: {fileID: 4562320682000550244}
   m_RootOrder: 0
@@ -188,8 +168,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -214,7 +192,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 26554f9ffbc4ac74dbe5ecada69daed6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a91e01cb7b7163b4187ec6b1b219d86d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

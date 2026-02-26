@@ -15,9 +15,7 @@ public class CountTheDolls_2_4_Controller : BaseController<CountTheDolls_2_4_Con
     public float maxRandomDistance = 10f;
     public float maxRandomRotation = 20f;
     public HorizontalScroll horizontalScroll;
-    public AudioClip a_true;
-    public AudioClip[] a_folse;
-    int r;
+
     public int currentNumber = 0;
     public int currentLevel = 0;
     public int maxLevels = 5;
@@ -36,7 +34,7 @@ public class CountTheDolls_2_4_Controller : BaseController<CountTheDolls_2_4_Con
     [Header("Audio")]
     public AudioClip[] startAudio1;
     public AudioClip[] startAudio2;
-   
+
     private void Start()
     {
         for (int i = 0; i < horizontalScroll.availableCards.Count; i++)
@@ -84,22 +82,12 @@ public class CountTheDolls_2_4_Controller : BaseController<CountTheDolls_2_4_Con
     {
         if (id == currentNumber)
         {
-            CatHelper.Instance.PlayAudio(a_true);
             //CatHelper.Instance.ShowText("Правильно! Тут " + (!useDolls ? Global.animalsCountNames[id] : Global.dollsCountNames[id]) + ".");
             NextLevel();
         }
         else
         {
-            CatHelper.Instance.ShowText("Неверно...");
-            
-            CatHelper.Instance.PlayAudio(a_folse[r], 0.01f);
-            r=r+1;
-            if(r>1)
-            {
-            r=0;
-            }
-            
-            
+            CatHelper.Instance.ShowText("Неверно!");
             SoundMaster.Instance.PlayWrongAnswer();
         }
     }
@@ -126,8 +114,8 @@ public class CountTheDolls_2_4_Controller : BaseController<CountTheDolls_2_4_Con
         }
         else
         {
-            //SoundMaster.Instance.PlayNextLevel();
-            CatHelper.Instance.ShowText("Молодец, идем дальше!");
+            SoundMaster.Instance.PlayNextLevel();
+            CatHelper.Instance.ShowText("Молодец! Идём дальше.");
             for (int i = 0; i < horizontalScroll.availableCards.Count; i++)
             {
                 foreach (var item in horizontalScroll.availableCards[i].cards)
@@ -135,7 +123,6 @@ public class CountTheDolls_2_4_Controller : BaseController<CountTheDolls_2_4_Con
                     item.GetComponent<Button>().interactable = true;
                 }
             }
-            yield return new WaitForSeconds(3.5f);
             Restart();
         }
     }

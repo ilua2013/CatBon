@@ -7,7 +7,6 @@ public abstract class BaseController<T> : Singleton<T> where T : MonoBehaviour
     public abstract void Restart();
     public virtual void Exit()
     {
-        print($"LoadMenu {gameObject.name}. 5");
         SceneManager.LoadScene("MainMenu");
     }
     protected IEnumerator AutoExit(float delay = -1)

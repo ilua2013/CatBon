@@ -1,7 +1,6 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
-using System.Collections;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -24,25 +23,21 @@ public class CanvasFader : MonoBehaviour
 
     public void In(System.Action callback = null)
     {
-        StartCoroutine(CG_FadeInOut(RenewCT(ref source1), 1f, inSpeed, canvasGroup, callback));
+        CG_FadeInOut(RenewCT(ref source1), 1f, inSpeed, canvasGroup, callback);
     }
     public void Out(System.Action callback = null)
     {
-        StartCoroutine(CG_FadeInOut(RenewCT(ref source1), 0f, outSpeed, canvasGroup, callback));
+        CG_FadeInOut(RenewCT(ref source1), 0f, outSpeed, canvasGroup, callback);
     }
-    private IEnumerator CG_FadeInOut(CancellationToken token, float target, float speed, CanvasGroup canvasGroup, System.Action callback = null)
+    private async void CG_FadeInOut(CancellationToken token, float target, float speed, CanvasGroup canvasGroup, System.Action callback = null)
     {
         while (Mathf.Abs(canvasGroup.alpha - target) > float.Epsilon && !token.IsCancellationRequested)
         {
             canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, target, speed);
-
-            yield return null;
+            await Task.Delay(16, token).ContinueWith(_ => { });
         }
-
         canvasGroup.alpha = target;
-
-        if (callback != null)
-            callback();
+        if (callback != null) callback();
     }
 #if UNITY_EDITOR
     private void OnValidate()

@@ -16,7 +16,6 @@ public class SoapController : MonoBehaviour
     public bool draggable = true;
     public Collider2D collider2;
     public float hideSpeed = 0.02f;
-    public AudioSource A_S;
 
     private bool _hided = false;
     public IntDelegate onMouseDown = (_) => { };
@@ -33,14 +32,8 @@ public class SoapController : MonoBehaviour
             {
                 onMouseUp(id);
                 collider2.enabled = true;
-                
-            }
-            else
-            {
-               
             }
             isDragging = false;
-             
         }
         if(isDragging)
         {
@@ -66,17 +59,12 @@ public class SoapController : MonoBehaviour
     }
 
     private void OnMouseDown()
-    {    A_S.Play();
+    {
         collider2.enabled = false;
         isDragging = true;
         onMouseDown(id);
     }
 
-private void OnMouseUp()
-    {    
-        A_S.Stop();
-        
-    }
     public void Show()
     {
         _hided = false;
@@ -91,7 +79,6 @@ private void OnMouseUp()
         _hided = true;
         collider2.enabled = false;
         StartCoroutine(_Hide());
-        A_S.Stop(); 
     }
 
     private IEnumerator _Hide()

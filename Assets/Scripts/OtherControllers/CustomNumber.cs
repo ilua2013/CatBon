@@ -13,16 +13,7 @@ public class CustomNumber : MonoBehaviour
     {
         SetNumber(5);
     }
- public void SetScleM()
-    {
-        //numberCard.rectTransform.sizeDelta = new Vector2(150f, 200f);
-    
-    }
-     public void SetScleN()
-    {
-        //numberCard.rectTransform.sizeDelta = new Vector2(130f, 194f);
-    
-    }
+
 
     public void SetNumber(int n)
     {
