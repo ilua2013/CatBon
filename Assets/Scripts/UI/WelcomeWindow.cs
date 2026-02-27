@@ -56,6 +56,8 @@ namespace UI
             nextFrame5.OnFilling -= ShowFrame5;
             backFrame3.onClick.RemoveListener(BackToFrame3);
             subscribing.onClick.RemoveListener(Subscribing);
+            
+            gameObject.SetActive(false);
         }
 
         private async Task ShowFrame(CanvasGroup frame)
