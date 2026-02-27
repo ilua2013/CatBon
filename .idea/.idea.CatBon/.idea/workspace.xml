@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6338016-d86d-4b4f-bbe3-7f2e01a18c95" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CatBon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatBon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/WelcomWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/WelcomWindow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/WelcomeWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/WelcomeWindow.cs" afterDir="false" />
-    </list>
+    <list default="true" id="b6338016-d86d-4b4f-bbe3-7f2e01a18c95" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +26,7 @@
   "keyToString": {
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "XThreadsFramesViewSplitterKey": "0.50076336",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -94,7 +91,7 @@
       <workItem from="1771058326772" duration="274000" />
       <workItem from="1771058628946" duration="10934000" />
       <workItem from="1771661265618" duration="2496000" />
-      <workItem from="1771676408447" duration="5701000" />
+      <workItem from="1771676408447" duration="6559000" />
     </task>
     <servers />
   </component>

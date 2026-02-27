@@ -142,6 +142,7 @@ namespace UI
         {
             await HideFrame(frame5);
             Debug.Log($"Подписка оформлена!");
+            Hide();
         }
     }
 }
