@@ -30,6 +30,7 @@ namespace UI
         [Space]
         [SerializeField] private CanvasGroup frame5;
         [SerializeField] private Button subscribing;
+        [SerializeField] private Button closeButton;
 
         public void Show()
         {
@@ -56,6 +57,7 @@ namespace UI
             nextFrame5.OnFilling -= ShowFrame5;
             backFrame3.onClick.RemoveListener(BackToFrame3);
             subscribing.onClick.RemoveListener(Subscribing);
+            closeButton.onClick.RemoveListener(Hide);
             
             gameObject.SetActive(false);
         }
@@ -137,6 +139,8 @@ namespace UI
             nextFrame5.SetFillAmount(1f);
             await HideFrame(frame4);
             await ShowFrame(frame5);
+            
+            closeButton.onClick.AddListener(Hide);
             subscribing.onClick.AddListener(Subscribing);
         }
 

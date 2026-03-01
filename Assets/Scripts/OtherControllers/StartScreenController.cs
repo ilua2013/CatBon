@@ -22,10 +22,11 @@ public class StartScreenController : MonoBehaviour
     public CanvasFader canvasFader;
 
     private IEnumerator routine;
+
     // Start is called before the first frame update
     void Start()
     {
-        if(Global.appFirstStart)
+        if (Global.appFirstStart)
         {
             if (System.DateTime.Now.Hour > 20)
             {
@@ -39,14 +40,14 @@ public class StartScreenController : MonoBehaviour
                 car.sprite = dayCar;
                 logo.sprite = dayLogo;
             }
-            
-            mainMenu2.HideSubscribeWindow();
+
+            mainMenu2.HideWelcomWindow();
             Global.RenewCoroutine(this, ref routine, DelayedSkip());
         }
         else
         {
             gameObject.SetActive(false);
-        } 
+        }
     }
 
     public void Hide()
@@ -54,11 +55,17 @@ public class StartScreenController : MonoBehaviour
         skipperButton.interactable = false;
         StopCoroutine(routine);
         canvasFader.Out(() => { gameObject.SetActive(false); });
-        if (Global.appFirstStart) animator.SetTrigger("Out");
+        
+        if (Global.appFirstStart)
+        {
+            animator.SetTrigger("Out");
+            mainMenu2.ShowWelcomWindow();
+        }
+
         Global.appFirstStart = false;
-        mainMenu2.ShowSubscribeWindow();
-        //mainMenu2.PlayHello();
+       
     }
+
     private IEnumerator DelayedSkip()
     {
         yield return new WaitForSeconds(3f);

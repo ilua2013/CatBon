@@ -24,7 +24,7 @@ public class MainMenu2 : MonoBehaviour
     
     public static MainMenu2 Instance;
 
-    [FormerlySerializedAs("subscribeWindow")] [SerializeField] private WelcomeWindow welcomeWindow;
+    [SerializeField] private WelcomeWindow welcomeWindow;
     
     private ISubscriptionService subscriptionService;
 
@@ -36,8 +36,8 @@ public class MainMenu2 : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-
-        HideSubscribeWindow();
+        
+        HideWelcomWindow();
     }
 
     private void Start() 
@@ -46,13 +46,13 @@ public class MainMenu2 : MonoBehaviour
         SoundMaster.Instance.PlayMusic(0);
     }
 
-    public void ShowSubscribeWindow()
+    public void ShowWelcomWindow()
     {
         welcomeWindow.gameObject.SetActive(true);
         welcomeWindow.Show();
     }
 
-    public void HideSubscribeWindow()
+    public void HideWelcomWindow()
     {
         welcomeWindow.gameObject.SetActive(false);
         welcomeWindow.Hide();
