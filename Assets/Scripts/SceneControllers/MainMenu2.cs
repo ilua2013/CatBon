@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Services.Monetization.Subscription;
 using UI;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -25,12 +27,25 @@ public class MainMenu2 : MonoBehaviour
     public static MainMenu2 Instance;
 
     [SerializeField] private WelcomeWindow welcomeWindow;
+    [SerializeField] private TrialHasNotActivatedPopup trialHasNotActivatedPopup;
     
     private ISubscriptionService subscriptionService;
 
     public void Constructor(ISubscriptionService subscriptionService)
     {
         this.subscriptionService = subscriptionService;
+        
+        if (subscriptionService.ISubscriptionIsActive)
+        {
+            trialHasNotActivatedPopup.Hide();
+        }
+        else
+        {
+            trialHasNotActivatedPopup.Show();
+        }
+
+        subscriptionService.SubscriptionActivated += trialHasNotActivatedPopup.Hide;
+        subscriptionService.SubscriptionDeactivated += trialHasNotActivatedPopup.Show;
     }
 
     private void Awake()
@@ -124,5 +139,14 @@ public class MainMenu2 : MonoBehaviour
         {
             screens[i].SetActive(false);
         }
+    }
+
+    private void OnDestroy()
+    {
+        if (subscriptionService == null)
+            return;
+        
+        subscriptionService.SubscriptionActivated -= trialHasNotActivatedPopup.Show;
+        subscriptionService.SubscriptionDeactivated -= trialHasNotActivatedPopup.Hide;
     }
 }

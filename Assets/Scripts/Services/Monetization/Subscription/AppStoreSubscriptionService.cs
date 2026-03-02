@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Services.Monetization.Subscription;
@@ -12,7 +13,12 @@ namespace Services.Monetization
         private const string SubscriptionYearProductId = ""; 
         
         private StoreController storeController;
-        
+
+        public event Action SubscriptionActivated;
+        public event Action SubscriptionDeactivated;
+
+        public bool ISubscriptionIsActive { get; }
+
         public async void Initialize()
         {
             storeController = UnityIAPServices.StoreController();
