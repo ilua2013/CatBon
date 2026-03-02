@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using Services.Monetization.Subscription;
 using UI.Elements;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -31,9 +32,14 @@ namespace UI
         [SerializeField] private CanvasGroup frame5;
         [SerializeField] private Button subscribing;
         [SerializeField] private Button closeButton;
+        [SerializeField] private Toggle monthToggle;
+        [SerializeField] private Toggle yearToggle;
+        
+        private ISubscriptionService subscriptionService;
 
-        public void Show()
+        public void Show(ISubscriptionService subscriptionService)
         {
+            this.subscriptionService = subscriptionService;
             frame1.gameObject.SetActive(false);
             frame2.gameObject.SetActive(false);
             frame3.gameObject.SetActive(false);
@@ -147,7 +153,8 @@ namespace UI
         private async void Subscribing()
         {
             await HideFrame(frame5);
-            Debug.Log($"Подписка оформлена!");
+            var type = monthToggle.isOn ? 0 : 1;
+            subscriptionService.BuySubscription(type);
             Hide();
         }
     }

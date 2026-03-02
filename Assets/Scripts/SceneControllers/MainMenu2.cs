@@ -49,7 +49,7 @@ public class MainMenu2 : MonoBehaviour
     public void ShowWelcomWindow()
     {
         welcomeWindow.gameObject.SetActive(true);
-        welcomeWindow.Show();
+        welcomeWindow.Show(subscriptionService);
     }
 
     public void HideWelcomWindow()
