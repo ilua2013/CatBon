@@ -2459,6 +2459,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 51ed4bf2858020c4b8a9fef73ca4dfa3, type: 3}
   welcomeWindow: {fileID: 210668863}
   trialHasNotActivatedPopup: {fileID: 1042928588913555662}
+  trialHasCanceledOrCompletePopup: {fileID: 4254013699219629374}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -8592,6 +8593,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 693f00dc85bcc224b85ea97823bca718, type: 3}
+--- !u!114 &4254013699219629374 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6441316907195700294, guid: 693f00dc85bcc224b85ea97823bca718, type: 3}
+  m_PrefabInstance: {fileID: 4254013699219629373}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e0464c29d4b8eb4f8b5e6f660abda4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &5300939340413710045 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 684456638589528560, guid: 693f00dc85bcc224b85ea97823bca718, type: 3}

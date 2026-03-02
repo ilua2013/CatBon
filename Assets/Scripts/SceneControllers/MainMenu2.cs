@@ -28,6 +28,7 @@ public class MainMenu2 : MonoBehaviour
 
     [SerializeField] private WelcomeWindow welcomeWindow;
     [SerializeField] private TrialHasNotActivatedPopup trialHasNotActivatedPopup;
+    [SerializeField] private TrialHasCanceledOrCompletePopup trialHasCanceledOrCompletePopup;
     
     private ISubscriptionService subscriptionService;
 
@@ -35,17 +36,21 @@ public class MainMenu2 : MonoBehaviour
     {
         this.subscriptionService = subscriptionService;
         
+        trialHasNotActivatedPopup.Hide();
+        
         if (subscriptionService.ISubscriptionIsActive)
         {
-            trialHasNotActivatedPopup.Hide();
+            trialHasCanceledOrCompletePopup.Hide();
         }
         else
         {
-            trialHasNotActivatedPopup.Show();
+            trialHasCanceledOrCompletePopup.Show();
         }
 
         subscriptionService.SubscriptionActivated += trialHasNotActivatedPopup.Hide;
         subscriptionService.SubscriptionDeactivated += trialHasNotActivatedPopup.Show;
+        subscriptionService.SubscriptionEnded += trialHasCanceledOrCompletePopup.Show;
+        subscriptionService.SubscriptionActivated += trialHasCanceledOrCompletePopup.Hide;
     }
 
     private void Awake()
@@ -148,5 +153,7 @@ public class MainMenu2 : MonoBehaviour
         
         subscriptionService.SubscriptionActivated -= trialHasNotActivatedPopup.Show;
         subscriptionService.SubscriptionDeactivated -= trialHasNotActivatedPopup.Hide;
+        subscriptionService.SubscriptionEnded -= trialHasCanceledOrCompletePopup.Show;
+        subscriptionService.SubscriptionActivated -= trialHasCanceledOrCompletePopup.Hide;
     }
 }

@@ -7,6 +7,7 @@ namespace Services.Monetization.Subscription
     {
         public event Action SubscriptionActivated;
         public event Action SubscriptionDeactivated;
+        public event Action SubscriptionEnded;
 
         [field: SerializeField]
         public bool ISubscriptionIsActive { get; private set; }
@@ -16,6 +17,11 @@ namespace Services.Monetization.Subscription
         public void Initialize()
         {
             Debug.Log($"Инициализация сервиса покупок подписки");
+
+            if (ISubscriptionIsActive && !Global.appFirstStart)
+            {
+                SubscriptionEnded?.Invoke();
+            }
         }
 
         public void BuySubscription(int value)

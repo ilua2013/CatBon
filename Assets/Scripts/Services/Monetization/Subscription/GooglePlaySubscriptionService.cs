@@ -11,6 +11,7 @@ namespace Services.Monetization.Subscription
 
         public event Action SubscriptionActivated;
         public event Action SubscriptionDeactivated;
+        public event Action SubscriptionEnded;
 
         public bool ISubscriptionIsActive { get; }
 

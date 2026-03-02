@@ -6,6 +6,7 @@ namespace Services.Monetization.Subscription
     {
         event Action SubscriptionActivated;
         event Action SubscriptionDeactivated;
+        event Action SubscriptionEnded;
         bool ISubscriptionIsActive { get; }
         
         void Initialize();
