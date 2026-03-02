@@ -103,11 +103,11 @@ public class MainMenu2 : MonoBehaviour
             if (!scenes[i].Contains(id + "_"))
                 continue;
             
-            if(!subscriptionService.IsThereSubscription())
+            /*if(!subscriptionService.IsThereSubscription())
             {
                 Debug.Log($"Купите подписку!!!");
                 return;
-            }
+            }*/
             
             SoundMaster.Instance.PlayMusic(sceneThemes[i].musicId);
             Global.lastScreen = int.Parse(id.Substring(0, id.IndexOf("_"))) - 1;

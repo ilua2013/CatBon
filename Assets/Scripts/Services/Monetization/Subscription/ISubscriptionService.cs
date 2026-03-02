@@ -2,6 +2,7 @@ namespace Services.Monetization.Subscription
 {
     public interface ISubscriptionService
     {
-        bool IsThereSubscription();
+        void Initialize();
+        void BuySubscription(int value);
     }
 }

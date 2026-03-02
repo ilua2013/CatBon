@@ -10,11 +10,9 @@ namespace Infractructure.EntryPoints
         
         private void Start()
         {
-            var subscriptionService = GetSubscriptionService();
+            var subscriptionService = new AppStoreSubscriptionService(); //GetSubscriptionService();
+            subscriptionService.Initialize();
             mainMenu.Constructor(subscriptionService);
-
-            if (!subscriptionService.IsThereSubscription())
-                mainMenu.ShowWelcomWindow();
         }
 
         private ISubscriptionService GetSubscriptionService() =>

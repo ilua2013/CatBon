@@ -6,5 +6,15 @@ namespace Services.Monetization.Subscription
         {
             return false;
         }
+
+        public void Initialize()
+        {
+            
+        }
+
+        public void BuySubscription(int value)
+        {
+            
+        }
     }
 }
