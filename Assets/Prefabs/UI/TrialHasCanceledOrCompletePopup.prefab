@@ -573,6 +573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0464c29d4b8eb4f8b5e6f660abda4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showSubscribeButton: {fileID: 6220510058052797440}
 --- !u!1 &9116264847729377559
 GameObject:
   m_ObjectHideFlags: 0

@@ -663,3 +663,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43e3b37665df69347b5590b51156fa42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showSubscribeButton: {fileID: 4226997171814556337}
