@@ -1,7 +1,5 @@
-using Services.Monetization;
 using Services.Monetization.Subscription;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Infractructure.EntryPoints
 {
@@ -21,8 +19,8 @@ namespace Infractructure.EntryPoints
         private ISubscriptionService GetSubscriptionService() =>
             Application.platform switch
             {
-                RuntimePlatform.Android => new GooglePlaySubscriptionService(),
-                RuntimePlatform.IPhonePlayer => new AppStoreSubscriptionService(),
+                RuntimePlatform.Android => new IAPManager(),
+                RuntimePlatform.IPhonePlayer => new IAPManager(),
                 _ => editorSubscriptionService
             };
     }
