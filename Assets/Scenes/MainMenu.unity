@@ -1081,7 +1081,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6525426760205309872, guid: 8c9aea6a60993934ea1a9801939046a2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6547075372145401368, guid: 8c9aea6a60993934ea1a9801939046a2, type: 3}
       propertyPath: m_Pivot.x
@@ -2318,8 +2318,8 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1405.7}
-  m_ScreenMatchMode: 1
-  m_MatchWidthOrHeight: 0
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0.469
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -8622,6 +8622,10 @@ PrefabInstance:
     - target: {fileID: 1787816847851864190, guid: b8f8dddddeb10114bab17fe93a5a3e70, type: 3}
       propertyPath: m_Name
       value: SubscribeWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1787816847851864190, guid: b8f8dddddeb10114bab17fe93a5a3e70, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3627892304892298241, guid: b8f8dddddeb10114bab17fe93a5a3e70, type: 3}
       propertyPath: m_Pivot.x

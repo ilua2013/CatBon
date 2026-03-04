@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Services.Monetization.Subscription;
+﻿using Services.Monetization.Subscription;
 using UI;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 
 [System.Serializable]
 public class SceneMusicContainer
@@ -38,6 +33,7 @@ public class MainMenu2 : MonoBehaviour
         this.subscriptionService = subscriptionService;
         
         trialHasNotActivatedPopup.Hide();
+        subscribeWindow.Hide();
         
         if (subscriptionService.ISubscriptionIsActive)
         {

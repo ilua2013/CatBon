@@ -12,6 +12,8 @@ namespace UI
         [SerializeField] private Button closeButton;
         [SerializeField] private Toggle monthToggle;
         [SerializeField] private Toggle yearToggle;
+
+        private int subscribeType;
         
         public void Show(ISubscriptionService subscriptionService)
         {
@@ -22,7 +24,7 @@ namespace UI
             subscribing.onClick.AddListener(Subscribing);
         }
 
-        private void Hide()
+        public void Hide()
         {
             gameObject.SetActive(false);
             
