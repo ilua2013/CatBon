@@ -22,7 +22,6 @@ public class MainMenu2 : MonoBehaviour
     public static MainMenu2 Instance;
 
     [SerializeField] private WelcomeWindow welcomeWindow;
-        //[SerializeField] private TrialHasNotActivatedPopup trialHasNotActivatedPopup;
     [SerializeField] private TrialHasCanceledOrCompletePopup trialHasCanceledOrCompletePopup;
     [SerializeField] private SubscribeWindow subscribeWindow;
     
@@ -123,11 +122,11 @@ public class MainMenu2 : MonoBehaviour
             if (!scenes[i].Contains(id + "_"))
                 continue;
             
-            /*if(!subscriptionService.IsThereSubscription())
+            if(!subscriptionService.ISubscriptionIsActive)
             {
                 Debug.Log($"Купите подписку!!!");
-                return;
-            }*/
+                ShowSubscribeWindow();
+            }
             
             SoundMaster.Instance.PlayMusic(sceneThemes[i].musicId);
             Global.lastScreen = int.Parse(id.Substring(0, id.IndexOf("_"))) - 1;
