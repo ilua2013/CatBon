@@ -1,4 +1,5 @@
 using Services.Monetization.Subscription;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,7 @@ namespace UI
         [SerializeField] private Button closeButton;
         [SerializeField] private Toggle monthToggle;
         [SerializeField] private Toggle yearToggle;
+        [SerializeField] private TMP_Text priceField;
 
         private int subscribeType;
         
@@ -22,6 +24,8 @@ namespace UI
             
             closeButton.onClick.AddListener(Hide);
             subscribing.onClick.AddListener(Subscribing);
+            monthToggle.onValueChanged.AddListener(MonthTextChange);
+            yearToggle.onValueChanged.AddListener(YearTextChange);
         }
 
         public void Hide()
@@ -30,6 +34,22 @@ namespace UI
             
             closeButton.onClick.RemoveListener(Hide);
             subscribing.onClick.RemoveListener(Subscribing);
+            monthToggle.onValueChanged.RemoveListener(MonthTextChange);
+            yearToggle.onValueChanged.RemoveListener(YearTextChange);
+        }
+        
+        private void MonthTextChange(bool isOn)
+        {
+            if (isOn)
+                priceField.text = "3 дня бесплатно, затем 290 руб/мес. \n" +
+                                  "Автопродление. Отмена в любой момент.";
+        }
+        
+        private void YearTextChange(bool isOn)
+        {
+            if (isOn)
+                priceField.text = "3 дня бесплатно, затем 1790 руб/мес. \n" +
+                                  "Автопродление. Отмена в любой момент.";
         }
 
         private void Subscribing()

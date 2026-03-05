@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using Services.Monetization.Subscription;
+using TMPro;
 using UI.Elements;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -34,6 +35,7 @@ namespace UI
         [SerializeField] private Button closeButton;
         [SerializeField] private Toggle monthToggle;
         [SerializeField] private Toggle yearToggle;
+        [SerializeField] private TMP_Text priceField;
         
         private ISubscriptionService subscriptionService;
 
@@ -64,6 +66,8 @@ namespace UI
             backFrame3.onClick.RemoveListener(BackToFrame3);
             subscribing.onClick.RemoveListener(Subscribing);
             closeButton.onClick.RemoveListener(Hide);
+            monthToggle.onValueChanged.RemoveListener(MonthTextChange);
+            yearToggle.onValueChanged.RemoveListener(YearTextChange);
             
             gameObject.SetActive(false);
         }
@@ -148,13 +152,33 @@ namespace UI
             
             closeButton.onClick.AddListener(Hide);
             subscribing.onClick.AddListener(Subscribing);
+            
+            monthToggle.onValueChanged.AddListener(MonthTextChange);
+            yearToggle.onValueChanged.AddListener(YearTextChange);
+        }
+
+        private void MonthTextChange(bool isOn)
+        {
+            if (isOn)
+                priceField.text = "3 дня бесплатно, затем 290 руб/мес. \n" +
+                                  "Автопродление. Отмена в любой момент.";
+        }
+        
+        private void YearTextChange(bool isOn)
+        {
+            if (isOn)
+                priceField.text = "3 дня бесплатно, затем 1790 руб/мес. \n" +
+                                  "Автопродление. Отмена в любой момент.";
         }
 
         private async void Subscribing()
         {
-            await HideFrame(frame5);
             var type = monthToggle.isOn ? 0 : 1;
             subscriptionService.BuySubscription(type);
+            await HideFrame(frame5);
+            
+            monthToggle.onValueChanged.RemoveListener(MonthTextChange);
+            yearToggle.onValueChanged.RemoveListener(YearTextChange);
             Hide();
         }
     }

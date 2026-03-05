@@ -22,7 +22,7 @@ public class MainMenu2 : MonoBehaviour
     public static MainMenu2 Instance;
 
     [SerializeField] private WelcomeWindow welcomeWindow;
-    [SerializeField] private TrialHasNotActivatedPopup trialHasNotActivatedPopup;
+        //[SerializeField] private TrialHasNotActivatedPopup trialHasNotActivatedPopup;
     [SerializeField] private TrialHasCanceledOrCompletePopup trialHasCanceledOrCompletePopup;
     [SerializeField] private SubscribeWindow subscribeWindow;
     
@@ -32,26 +32,20 @@ public class MainMenu2 : MonoBehaviour
     {
         this.subscriptionService = subscriptionService;
         
-        trialHasNotActivatedPopup.Hide();
         subscribeWindow.Hide();
         
         if (subscriptionService.ISubscriptionIsActive)
         {
             trialHasCanceledOrCompletePopup.Hide();
-            trialHasNotActivatedPopup.Hide();
         }
         else
         {
             trialHasCanceledOrCompletePopup.Show();
         }
-
-        subscriptionService.SubscriptionActivated += trialHasNotActivatedPopup.Hide;
-        subscriptionService.SubscriptionDeactivated += trialHasNotActivatedPopup.Show;
         subscriptionService.SubscriptionEnded += trialHasCanceledOrCompletePopup.Show;
         subscriptionService.SubscriptionActivated += trialHasCanceledOrCompletePopup.Hide;
 
         trialHasCanceledOrCompletePopup.SubscribeButtonClicked += ShowSubscribeWindow;
-        trialHasNotActivatedPopup.SubscribeButtonClicked += ShowSubscribeWindow;
     }
 
     private void ShowSubscribeWindow()
@@ -157,11 +151,8 @@ public class MainMenu2 : MonoBehaviour
         if (subscriptionService == null)
             return;
         
-        subscriptionService.SubscriptionActivated -= trialHasNotActivatedPopup.Show;
-        subscriptionService.SubscriptionDeactivated -= trialHasNotActivatedPopup.Hide;
         subscriptionService.SubscriptionEnded -= trialHasCanceledOrCompletePopup.Show;
         subscriptionService.SubscriptionActivated -= trialHasCanceledOrCompletePopup.Hide;
         trialHasCanceledOrCompletePopup.SubscribeButtonClicked -= ShowSubscribeWindow;
-        trialHasNotActivatedPopup.SubscribeButtonClicked -= ShowSubscribeWindow;
     }
 }

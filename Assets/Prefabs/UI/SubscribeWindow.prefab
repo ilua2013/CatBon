@@ -913,6 +913,7 @@ MonoBehaviour:
   closeButton: {fileID: 2402270231421560749}
   monthToggle: {fileID: 1394924943811767109}
   yearToggle: {fileID: 4654442766455920722}
+  priceField: {fileID: 7808823433725872382}
 --- !u!1 &1860572029790813675
 GameObject:
   m_ObjectHideFlags: 0
