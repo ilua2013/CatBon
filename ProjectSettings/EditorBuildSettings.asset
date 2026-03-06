@@ -8,36 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 3da48b46aa4a48843ba324db0cad3819
-  - enabled: 0
-    path: Assets/Scenes/Level1.unity
-    guid: 0262a675c90a20e4bba437cdec3d5a16
-  - enabled: 0
-    path: Assets/Scenes/Level2.unity
-    guid: 4c61adb0614672a48b22c78b88764d8f
-  - enabled: 0
-    path: Assets/Scenes/Level3.unity
-    guid: 2b4632d392415984ca563b4164f05ac9
-  - enabled: 0
-    path: Assets/Scenes/Level4.unity
-    guid: c221dfba2b38d7c4e827c4eaeedb676c
   - enabled: 1
     path: Assets/Scenes/Levels/1_1_AllColors.unity
     guid: 18037031e693cb748b02331ce289c475
-  - enabled: 0
-    path: Assets/NewUI/sprite/Loto Final/Levels/1_2_2_PutOnShelf.unity
-    guid: 071556170a82d614c9c263fd74544154
   - enabled: 1
     path: Assets/Scenes/Levels/1_2_PutOnShelf.unity
     guid: 5b506fcc210d94b47b723f0eaf7e086b
   - enabled: 1
     path: Assets/Scenes/Levels/1_3_ColorLoto.unity
     guid: 44edeadcf4b3a54459a7eea98c3c0a89
-  - enabled: 0
-    path: Assets/NewUI/sprite/Loto Final/Levels/1_4_1_CompleteTheCar.unity
-    guid: b6cf975d8bfb79a43aff118b3798f87e
-  - enabled: 0
-    path: Assets/NewUI/sprite/Loto Final/Levels/1_4_2_CompleteTheCar.unity
-    guid: 9366a06329288f544b439e72cf8082ab
   - enabled: 1
     path: Assets/Scenes/Levels/1_4_CompleteTheCar.unity
     guid: ca0a8e68ca3d9084592d03a607e0399e
@@ -68,18 +47,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/3_2_Puzzles.unity
     guid: 70dbc11a1c1dd09439da68fb71721085
-  - enabled: 0
-    path: Assets/NewUI/sprite/Loto Final/Levels/3_3_1.unity
-    guid: 205433d96f4f7e44a9944281ce70611a
-  - enabled: 0
-    path: "Assets/NewUI/sprite/Loto Final/Levels/3_3_WhatAnimalsEat \u2014 \u043A\u043E\u043F\u0438\u044F.unity"
-    guid: c8a19ccd6c7167d4b94a14e862978cd9
   - enabled: 1
     path: Assets/Scenes/Levels/3_3_WhatAnimalsEat.unity
     guid: d66afb2b0ca9a04498f254955d1b6d9d
-  - enabled: 0
-    path: Assets/NewUI/sprite/Loto Final/Levels/3_4_1_MatchThree.unity
-    guid: 64bd8a845980aef47be1d4936f3fae5f
   - enabled: 1
     path: Assets/Scenes/Levels/3_4_MatchThree.unity
     guid: c51ef40185c0bda4eadc70b2b1c89b05
@@ -92,8 +62,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/4_3_WashTheAnimal.unity
     guid: 9f79b0a8ece8018489d4210ea3f795a1
-  - enabled: 0
-    path: Assets/NewUI/sprite/Loto Final/Levels/4_4.unity
-    guid: 7cb34f294b5166448adb0d0a6d080f78
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

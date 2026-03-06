@@ -2,6 +2,7 @@
 using UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class SceneMusicContainer
@@ -24,6 +25,7 @@ public class MainMenu2 : MonoBehaviour
     [SerializeField] private WelcomeWindow welcomeWindow;
     [SerializeField] private TrialHasCanceledOrCompletePopup trialHasCanceledOrCompletePopup;
     [SerializeField] private SubscribeWindow subscribeWindow;
+    [SerializeField] private Button privacyPolicy;
     
     private ISubscriptionService subscriptionService;
 
@@ -43,8 +45,13 @@ public class MainMenu2 : MonoBehaviour
         }
         subscriptionService.SubscriptionEnded += trialHasCanceledOrCompletePopup.Show;
         subscriptionService.SubscriptionActivated += trialHasCanceledOrCompletePopup.Hide;
-
+        privacyPolicy.onClick.AddListener(OnPrivacyPolicyClick);
         trialHasCanceledOrCompletePopup.SubscribeButtonClicked += ShowSubscribeWindow;
+    }
+
+    private void OnPrivacyPolicyClick()
+    {
+        Application.OpenURL("https://taplink.cc/smart_bon_legal");
     }
 
     private void ShowSubscribeWindow()
@@ -126,6 +133,7 @@ public class MainMenu2 : MonoBehaviour
             {
                 Debug.Log($"Купите подписку!!!");
                 ShowSubscribeWindow();
+                return;
             }
             
             SoundMaster.Instance.PlayMusic(sceneThemes[i].musicId);
