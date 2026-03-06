@@ -36,6 +36,7 @@ namespace UI
         [SerializeField] private Toggle monthToggle;
         [SerializeField] private Toggle yearToggle;
         [SerializeField] private TMP_Text priceField;
+        [SerializeField] private Button restoringPurchases;
         
         private ISubscriptionService subscriptionService;
 
@@ -68,6 +69,7 @@ namespace UI
             closeButton.onClick.RemoveListener(Hide);
             monthToggle.onValueChanged.RemoveListener(MonthTextChange);
             yearToggle.onValueChanged.RemoveListener(YearTextChange);
+            restoringPurchases.onClick.RemoveListener(RestoringPurchases);
             
             gameObject.SetActive(false);
         }
@@ -152,6 +154,7 @@ namespace UI
             
             closeButton.onClick.AddListener(Hide);
             subscribing.onClick.AddListener(Subscribing);
+            restoringPurchases.onClick.AddListener(RestoringPurchases);
             
             monthToggle.onValueChanged.AddListener(MonthTextChange);
             yearToggle.onValueChanged.AddListener(YearTextChange);
@@ -171,12 +174,19 @@ namespace UI
                                   "Автопродление. Отмена в любой момент.";
         }
 
+        private void RestoringPurchases()
+        {
+            Hide();
+            subscriptionService.RestorePurchases();
+        }
+        
         private async void Subscribing()
         {
             var type = monthToggle.isOn ? 0 : 1;
             subscriptionService.BuySubscription(type);
             await HideFrame(frame5);
             
+            restoringPurchases.onClick.RemoveListener(RestoringPurchases);
             monthToggle.onValueChanged.RemoveListener(MonthTextChange);
             yearToggle.onValueChanged.RemoveListener(YearTextChange);
             Hide();

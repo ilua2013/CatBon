@@ -14,6 +14,7 @@ namespace UI
         [SerializeField] private Toggle monthToggle;
         [SerializeField] private Toggle yearToggle;
         [SerializeField] private TMP_Text priceField;
+        [SerializeField] private Button restoringPurchases;
 
         private int subscribeType;
         
@@ -24,8 +25,15 @@ namespace UI
             
             closeButton.onClick.AddListener(Hide);
             subscribing.onClick.AddListener(Subscribing);
+            restoringPurchases.onClick.AddListener(RestoringPurchases);
             monthToggle.onValueChanged.AddListener(MonthTextChange);
             yearToggle.onValueChanged.AddListener(YearTextChange);
+        }
+
+        private void RestoringPurchases()
+        {
+            Hide();
+            subscriptionService.RestorePurchases();
         }
 
         public void Hide()
@@ -34,6 +42,7 @@ namespace UI
             
             closeButton.onClick.RemoveListener(Hide);
             subscribing.onClick.RemoveListener(Subscribing);
+            restoringPurchases.onClick.RemoveListener(RestoringPurchases);
             monthToggle.onValueChanged.RemoveListener(MonthTextChange);
             yearToggle.onValueChanged.RemoveListener(YearTextChange);
         }

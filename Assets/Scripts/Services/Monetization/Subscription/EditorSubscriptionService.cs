@@ -39,5 +39,10 @@ namespace Services.Monetization.Subscription
                 SubscriptionDeactivated?.Invoke();
             }
         }
+
+        public void RestorePurchases()
+        {
+            
+        }
     }
 }

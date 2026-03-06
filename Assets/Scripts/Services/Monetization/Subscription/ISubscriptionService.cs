@@ -11,5 +11,6 @@ namespace Services.Monetization.Subscription
         
         void Initialize();
         void BuySubscription(int value);
+        void RestorePurchases();
     }
 }
