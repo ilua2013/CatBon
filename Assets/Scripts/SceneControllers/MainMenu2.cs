@@ -23,7 +23,7 @@ public class MainMenu2 : MonoBehaviour
     public static MainMenu2 Instance;
 
     [SerializeField] private WelcomeWindow welcomeWindow;
-    [SerializeField] private TrialHasCanceledOrCompletePopup trialHasCanceledOrCompletePopup;
+    [SerializeField] private TrialHasNotActivatedPopup trialHasCanceledOrCompletePopup;
     [SerializeField] private SubscribeWindow subscribeWindow;
     [SerializeField] private Button privacyPolicy;
     
