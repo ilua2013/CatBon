@@ -5820,7 +5820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 470a9d62794a430195829894f5c48cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showHideSpeed: 4
+  showHideSpeed: 5
   frame1: {fileID: 7770430519756641041}
   nextFrame2: {fileID: 5592885593585309912}
   frame2: {fileID: 21515266008408058}
