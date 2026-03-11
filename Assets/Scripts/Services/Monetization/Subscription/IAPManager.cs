@@ -17,18 +17,22 @@ public class IAPManager : ISubscriptionService
 
     // Унифицированные ID (должны совпадать со сторами)
     public const string SUB_MONTH = "month";
-    public const string SUB_YEAR = "year_subscribe";
+    public string SUB_YEAR = "year_subscribe";
 
-    private readonly List<ProductDefinition> m_ProductDefinitions = new()
-    {
-        new ProductDefinition(SUB_MONTH, ProductType.Subscription),
-        new ProductDefinition(SUB_YEAR, ProductType.Subscription)
-    };
+    private List<ProductDefinition> m_ProductDefinitions;
 
     private bool m_IsPremiumUnlocked = false;
 
     public async void Initialize()
     {
+        SUB_YEAR = Application.platform == RuntimePlatform.Android ? "year-subscribe" : "year_subscribe";
+        
+        m_ProductDefinitions = new()
+        {
+            new ProductDefinition(SUB_MONTH, ProductType.Subscription),
+            new ProductDefinition(SUB_YEAR, ProductType.Subscription)
+        };
+        
         await InitializeIAPAsync();
     }
 
