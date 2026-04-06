@@ -10,7 +10,7 @@ namespace Services.Monetization
         public void Initialize(ISubscriptionService subscriptionService)
         {
             subscriptionService.SubscriptionActivated += UnlockerGames;
-            subscriptionService.SubscriptionActivated += LockGames;
+            subscriptionService.SubscriptionDeactivated += LockGames;
             
             if(subscriptionService.ISubscriptionIsActive)
                 UnlockerGames();

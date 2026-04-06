@@ -10,9 +10,10 @@ public class IAPManager : ISubscriptionService
     public event Action SubscriptionActivated;
     public event Action SubscriptionDeactivated;
     public event Action SubscriptionEnded;
-    
-    public bool ISubscriptionIsActive { get; }
-    
+
+    // Основное публичное свойство
+    public bool ISubscriptionIsActive => m_MonthActive || m_YearActive;
+
     private StoreController m_StoreController;
 
     // Унифицированные ID (должны совпадать со сторами)
@@ -21,18 +22,20 @@ public class IAPManager : ISubscriptionService
 
     private List<ProductDefinition> m_ProductDefinitions;
 
-    private bool m_IsPremiumUnlocked = false;
+    // Отдельные флаги для каждой подписки (более точный контроль)
+    private bool m_MonthActive = false;
+    private bool m_YearActive = false;
 
     public async void Initialize()
     {
         SUB_YEAR = Application.platform == RuntimePlatform.Android ? "year-subscribe" : "year_subscribe";
-        
-        m_ProductDefinitions = new()
+
+        m_ProductDefinitions = new List<ProductDefinition>
         {
             new ProductDefinition(SUB_MONTH, ProductType.Subscription),
             new ProductDefinition(SUB_YEAR, ProductType.Subscription)
         };
-        
+
         await InitializeIAPAsync();
     }
 
@@ -50,9 +53,11 @@ public class IAPManager : ISubscriptionService
             m_StoreController.OnPurchasesFetched += OnPurchasesFetched;
             m_StoreController.OnCheckEntitlement += OnCheckEntitlement;
 
+            Debug.Log($"[{Time.time:F2}] IAP: Starting connection to store...");
+
             // 1. Подключение к стору
             await m_StoreController.Connect();
-            Debug.Log("IAP: Connected to store");
+            Debug.Log($"[{Time.time:F2}] IAP: Connected to store");
 
             // 2. Запрос продуктов
             m_StoreController.FetchProducts(m_ProductDefinitions);
@@ -65,28 +70,32 @@ public class IAPManager : ISubscriptionService
 
     private void OnProductsFetched(List<Product> products)
     {
-        Debug.Log($"IAP: Products fetched → {products.Count} items");
+        Debug.Log($"[{Time.time:F2}] IAP: Products fetched → {products.Count} items");
 
-        // После продуктов — запрос покупок
+        // После продуктов сразу запрашиваем покупки и entitlement
         m_StoreController.FetchPurchases();
     }
 
     private void OnPurchasesFetched(Orders orders)
     {
-        Debug.Log(
-            $"IAP: Purchases fetched → Confirmed: {orders.ConfirmedOrders.Count}, Pending: {orders.PendingOrders.Count}, Deferred: {orders.DeferredOrders.Count}");
+        Debug.Log($"[{Time.time:F2}] IAP: Purchases fetched → Confirmed: {orders.ConfirmedOrders.Count}, " +
+                  $"Pending: {orders.PendingOrders.Count}, Deferred: {orders.DeferredOrders.Count}");
 
-        // Проверяем entitlement для подписок
-        CheckEntitlementForSubscriptions();
+        RefreshSubscriptionStatus();
     }
 
-    private void CheckEntitlementForSubscriptions()
+    /// <summary>
+    /// Основной метод обновления статуса подписок (вызывать при старте, после restore и после покупки)
+    /// </summary>
+    public void RefreshSubscriptionStatus()
     {
-        Product? monthProduct = m_StoreController.GetProductById(SUB_MONTH);
+        Debug.Log($"[{Time.time:F2}] IAP: Refreshing subscription status...");
+
+        var monthProduct = m_StoreController.GetProductById(SUB_MONTH);
         if (monthProduct != null)
             m_StoreController.CheckEntitlement(monthProduct);
 
-        Product? yearProduct = m_StoreController.GetProductById(SUB_YEAR);
+        var yearProduct = m_StoreController.GetProductById(SUB_YEAR);
         if (yearProduct != null)
             m_StoreController.CheckEntitlement(yearProduct);
     }
@@ -96,99 +105,94 @@ public class IAPManager : ISubscriptionService
         string productId = entitlement.Product?.definition.id ?? "unknown";
         var status = entitlement.Status;
 
-        Debug.Log($"OnCheckEntitlement для {productId}: статус = {status}");
+        Debug.Log($"[{Time.time:F2}] OnCheckEntitlement → {productId}: {status}");
 
-        bool isEntitled = false;
+        bool shouldBeActive = false;
 
         switch (status)
         {
             case EntitlementStatus.FullyEntitled:
-                isEntitled = true;
-                Debug.Log($"FullyEntitled → подписка полностью активна");
+                shouldBeActive = true;
+                Debug.Log($"[{Time.time:F2}] FullyEntitled → подписка активна");
                 break;
 
             case EntitlementStatus.EntitledButNotFinished:
-                isEntitled = true; // entitlement уже дано, но транзакция pending → unlock можно
-                Debug.Log(
-                    $"EntitledButNotFinished → entitlement есть, но нужно завершить транзакцию (ConfirmPurchase если pending order)");
+                shouldBeActive = true;
+                Debug.Log($"[{Time.time:F2}] EntitledButNotFinished → подтверждаем pending заказ");
 
-                // Если entitlement.Order != null и это PendingOrder — можно подтвердить вручную:
-                // if (entitlement.Order is PendingOrder pending) m_StoreController.ConfirmPurchase(pending);
-                // Но для подписок обычно не требуется — стор сам обработает
+                if (entitlement.Order is PendingOrder pendingOrder)
+                {
+                    m_StoreController.ConfirmPurchase(pendingOrder);
+                }
                 break;
 
             case EntitlementStatus.EntitledUntilConsumed:
-                isEntitled = true; // для consumables; для подписок редко, но unlock если пришло
-                Debug.Log($"EntitledUntilConsumed → entitlement до потребления (часто consumables)");
+                shouldBeActive = true;
                 break;
 
             case EntitlementStatus.NotEntitled:
-                Debug.Log($"NotEntitled → нет доступа");
-                break;
-
             case EntitlementStatus.Unknown:
-                Debug.Log($"Unknown → статус неизвестен (проверь entitlement.ErrorMessage если есть)");
-                break;
-
-            default:
-                Debug.Log($"Неизвестный статус entitlement: {status}");
+                Debug.Log($"[{Time.time:F2}] Нет entitlement для {productId}");
                 break;
         }
 
-        if (isEntitled && (productId == SUB_MONTH || productId == SUB_YEAR))
+        // Обновляем флаги
+        if (productId == SUB_MONTH)
+            m_MonthActive = shouldBeActive;
+        else if (productId == SUB_YEAR)
+            m_YearActive = shouldBeActive;
+
+        // Проверяем общее состояние
+        UpdatePremiumState();
+    }
+
+    private void UpdatePremiumState()
+    {
+        bool newState = m_MonthActive || m_YearActive;
+
+        if (newState && !ISubscriptionIsActive) // было false → стало true
         {
-            m_IsPremiumUnlocked = true;
+            Debug.Log($"[{Time.time:F2}] Premium активирован!");
             UnlockPremiumContent();
         }
-        else
+        else if (!newState && ISubscriptionIsActive) // было true → стало false
         {
-            m_IsPremiumUnlocked = false;
+            Debug.Log($"[{Time.time:F2}] Premium деактивирован");
             LockPremiumContent();
-            // Для точного lock: добавь флаги m_MonthEntitled / m_YearEntitled
-            // и lock только если оба false
-            // Пока: unlock если хотя бы одна подписка entitled
+        }
+    }
+
+    private void OnPurchaseConfirmed(Order order)
+    {
+        if (order is not ConfirmedOrder confirmedOrder || confirmedOrder.Info.PurchasedProductInfo.Count == 0)
+            return;
+
+        string storeId = confirmedOrder.Info.PurchasedProductInfo[0].productId;
+        var product = m_StoreController.GetProductById(storeId);
+
+        string unifiedId = product?.definition.id ?? storeId;
+
+        Debug.Log($"[{Time.time:F2}] Purchase confirmed for {unifiedId} → проверяем entitlement");
+
+        if (product != null && (unifiedId == SUB_MONTH || unifiedId == SUB_YEAR))
+        {
+            m_StoreController.CheckEntitlement(product);   // ← Ключевой вызов!
         }
     }
 
     private void OnPurchasePending(PendingOrder pendingOrder)
     {
-        // ID продукта из info (store-specific ID)
         if (pendingOrder.Info.PurchasedProductInfo.Count > 0)
         {
             string storeId = pendingOrder.Info.PurchasedProductInfo[0].productId;
-            Debug.Log($"Purchase pending: {storeId}");
+            Debug.Log($"[{Time.time:F2}] Purchase pending for {storeId}");
         }
-        // Показать UI "Обработка..."
-    }
-
-    private void OnPurchaseConfirmed(Order order)
-    {
-        if (order is ConfirmedOrder confirmedOrder)
-        {
-            if (confirmedOrder.Info.PurchasedProductInfo.Count > 0)
-            {
-                string storeId = confirmedOrder.Info.PurchasedProductInfo[0].productId;
-                Product? product = m_StoreController.GetProductById(storeId); // Или match по definition.storeSpecificId
-                string unifiedId = product?.definition.id ?? storeId;
-
-                if (unifiedId == SUB_MONTH || unifiedId == SUB_YEAR)
-                {
-                    Debug.Log($"Purchase confirmed: {unifiedId}");
-                    m_IsPremiumUnlocked = true;
-                    UnlockPremiumContent();
-                }
-                else
-                {
-                    m_IsPremiumUnlocked = false;
-                    LockPremiumContent();
-                }
-            }
-        }
+        // Здесь можно показать индикатор "Обработка покупки..."
     }
 
     private void OnPurchaseFailed(FailedOrder failedOrder)
     {
-        Debug.LogWarning($"Purchase failed: {failedOrder.FailureReason}");
+        Debug.LogWarning($"[{Time.time:F2}] Purchase failed: {failedOrder.FailureReason}");
     }
 
     private void BuyProduct(string productId)
@@ -199,6 +203,7 @@ public class IAPManager : ISubscriptionService
             return;
         }
 
+        Debug.Log($"[{Time.time:F2}] Starting purchase: {productId}");
         m_StoreController.PurchaseProduct(productId);
     }
 
@@ -206,32 +211,39 @@ public class IAPManager : ISubscriptionService
     {
         if (m_StoreController == null) return;
 
+        Debug.Log($"[{Time.time:F2}] Starting Restore Purchases...");
+
         m_StoreController.RestoreTransactions((success, message) =>
         {
-            Debug.Log($"Restore: success={success}, message={message}");
+            Debug.Log($"[{Time.time:F2}] Restore completed: success={success}, message={message}");
+
             if (success)
-                m_StoreController.FetchPurchases(); // Обновить статус
+            {
+                m_StoreController.FetchPurchases(); // → OnPurchasesFetched → RefreshSubscriptionStatus
+            }
         });
     }
 
-    public void BuySubscription(int value)
+    public void BuySubscription(int value) // 0 = month, 1 = year
     {
-        BuyProduct(value == 0 ? SUB_MONTH : SUB_YEAR);
+        string productId = value == 0 ? SUB_MONTH : SUB_YEAR;
+        BuyProduct(productId);
     }
 
     private void UnlockPremiumContent()
     {
-        Debug.Log("Premium unlocked!");
-        m_IsPremiumUnlocked = true;
+        Debug.Log($"[{Time.time:F2}] === UNLOCK PREMIUM CONTENT ===");
         SubscriptionActivated?.Invoke();
+        // Здесь обновляй UI, активируй весь контент, сохраняй состояние и т.д.
+        // Важно: обновление должно происходить синхронно и сразу видно ревьюеру
     }
 
     private void LockPremiumContent()
     {
-        Debug.Log("Premium locked");
-        m_IsPremiumUnlocked = false;
+        Debug.Log($"[{Time.time:F2}] === LOCK PREMIUM CONTENT ===");
         SubscriptionDeactivated?.Invoke();
         SubscriptionEnded?.Invoke();
+        // Здесь прячь/блокируй контент
     }
 
     public void OnDestroy()
