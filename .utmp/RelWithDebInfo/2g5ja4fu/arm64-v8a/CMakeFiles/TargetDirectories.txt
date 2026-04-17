@@ -1,0 +1,5 @@
+C:/git/CatBon/.utmp/RelWithDebInfo/2g5ja4fu/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/git/CatBon/.utmp/RelWithDebInfo/2g5ja4fu/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/git/CatBon/.utmp/RelWithDebInfo/2g5ja4fu/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+C:/git/CatBon/.utmp/RelWithDebInfo/2g5ja4fu/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+C:/git/CatBon/.utmp/RelWithDebInfo/2g5ja4fu/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir

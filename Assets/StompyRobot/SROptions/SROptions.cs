@@ -1,46 +1,11 @@
-﻿using System.ComponentModel;
-using UnityEngine;
+﻿using System;
 
-public delegate void SROptionsPropertyChanged(object sender, string propertyName);
-
-public partial class SROptions : INotifyPropertyChanged
+public partial class SROptions
 {
-    private static readonly SROptions _current = new SROptions();
-
-    public static SROptions Current
-    {
-        get { return _current; }
-    }
-
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
-    public static void OnStartup()
-    {
-        SRDebug.Instance.AddOptionContainer(Current);
-    }
-
-    public event SROptionsPropertyChanged PropertyChanged;
+    public event Action OnLockAllContent;
     
-#if UNITY_EDITOR
-    [JetBrains.Annotations.NotifyPropertyChangedInvocator]
-#endif
-    public void OnPropertyChanged(string propertyName)
+    public void OnlockAllContent()
     {
-        if (PropertyChanged != null)
-        {
-            PropertyChanged(this, propertyName);
-        }
-
-        if (InterfacePropertyChangedEventHandler != null)
-        {
-            InterfacePropertyChangedEventHandler(this, new PropertyChangedEventArgs(propertyName));
-        }
-    }
-
-    private event PropertyChangedEventHandler InterfacePropertyChangedEventHandler;
-
-    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-    {
-        add { InterfacePropertyChangedEventHandler += value; }
-        remove { InterfacePropertyChangedEventHandler -= value; }
+        OnLockAllContent?.Invoke();
     }
 }

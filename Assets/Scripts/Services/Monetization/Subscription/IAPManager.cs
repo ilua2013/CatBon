@@ -37,6 +37,7 @@ public class IAPManager : ISubscriptionService
         };
 
         await InitializeIAPAsync();
+        SROptions.Current.OnLockAllContent += UnlockPremiumContent;
     }
 
     private async Task InitializeIAPAsync()
@@ -256,5 +257,7 @@ public class IAPManager : ISubscriptionService
         m_StoreController.OnProductsFetched -= OnProductsFetched;
         m_StoreController.OnPurchasesFetched -= OnPurchasesFetched;
         m_StoreController.OnCheckEntitlement -= OnCheckEntitlement;
+        
+        SROptions.Current.OnLockAllContent -= UnlockPremiumContent;
     }
 }
